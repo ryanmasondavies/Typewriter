@@ -10,16 +10,21 @@
 		71541D498DE648BFA8261402 /* libPods-Specs.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D9E2430E42114D2AADC68FDE /* libPods-Specs.a */; };
 		949382BA163F10CB0098768D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 949382B9163F10CB0098768D /* Foundation.framework */; };
 		949382C9163F10CB0098768D /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 949382C8163F10CB0098768D /* SenTestingKit.framework */; };
-		949382CB163F10CB0098768D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 949382CA163F10CB0098768D /* UIKit.framework */; };
 		949382CC163F10CB0098768D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 949382B9163F10CB0098768D /* Foundation.framework */; };
 		949382CF163F10CB0098768D /* libTypewriter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 949382B6163F10CB0098768D /* libTypewriter.a */; };
 		949382E9163F11010098768D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 949382E6163F11010098768D /* InfoPlist.strings */; };
-		949382F2163F117C0098768D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 949382CA163F10CB0098768D /* UIKit.framework */; };
 		949382F3163F117C0098768D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 949382B9163F10CB0098768D /* Foundation.framework */; };
 		949382F5163F117C0098768D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 949382F4163F117C0098768D /* CoreGraphics.framework */; };
 		949382FB163F117C0098768D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 949382F9163F117C0098768D /* InfoPlist.strings */; };
 		949382FD163F117D0098768D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 949382FC163F117D0098768D /* main.m */; };
 		94938301163F117D0098768D /* TWRAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 94938300163F117D0098768D /* TWRAppDelegate.m */; };
+		9493832B163F17440098768D /* UIApplication+TWRKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 94938328163F17440098768D /* UIApplication+TWRKeyboard.m */; };
+		9493832C163F17440098768D /* UIView+TWRSearching.m in Sources */ = {isa = PBXBuildFile; fileRef = 9493832A163F17440098768D /* UIView+TWRSearching.m */; };
+		94938344163F21C70098768D /* TWRApplicationKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 94938343163F21C70098768D /* TWRApplicationKeyboard.m */; };
+		9493839A163F24B90098768D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94938399163F24B90098768D /* UIKit.framework */; };
+		9493839B163F24C60098768D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94938399163F24B90098768D /* UIKit.framework */; };
+		9493839C163F24CB0098768D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94938399163F24B90098768D /* UIKit.framework */; };
+		BB27B502D4684453BCBC9D98 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F27FF5F51C614060939C8A05 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,13 +57,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0B85CCF52CC5408E84CD52BE /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		4A2A28075CFF4C1D996A3BD6 /* Pods-Specs.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Specs.xcconfig"; path = "Pods/Pods-Specs.xcconfig"; sourceTree = SOURCE_ROOT; };
 		949382B6163F10CB0098768D /* libTypewriter.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTypewriter.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		949382B9163F10CB0098768D /* Foundation.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		949382BD163F10CB0098768D /* Typewriter-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Typewriter-Prefix.pch"; sourceTree = "<group>"; };
 		949382C7163F10CB0098768D /* Specs.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Specs.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		949382C8163F10CB0098768D /* SenTestingKit.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		949382CA163F10CB0098768D /* UIKit.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		949382E7163F11010098768D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		949382E8163F11010098768D /* Specs-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Specs-Info.plist"; sourceTree = "<group>"; };
 		949382F0163F117C0098768D /* TestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,7 +74,15 @@
 		949382FE163F117D0098768D /* TestApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TestApp-Prefix.pch"; sourceTree = "<group>"; };
 		949382FF163F117D0098768D /* TWRAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TWRAppDelegate.h; sourceTree = "<group>"; };
 		94938300163F117D0098768D /* TWRAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TWRAppDelegate.m; sourceTree = "<group>"; };
+		94938327163F17440098768D /* UIApplication+TWRKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+TWRKeyboard.h"; sourceTree = "<group>"; };
+		94938328163F17440098768D /* UIApplication+TWRKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+TWRKeyboard.m"; sourceTree = "<group>"; };
+		94938329163F17440098768D /* UIView+TWRSearching.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+TWRSearching.h"; sourceTree = "<group>"; };
+		9493832A163F17440098768D /* UIView+TWRSearching.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+TWRSearching.m"; sourceTree = "<group>"; };
+		94938333163F180A0098768D /* TWRSpecHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TWRSpecHelper.h; sourceTree = "<group>"; };
+		94938343163F21C70098768D /* TWRApplicationKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWRApplicationKeyboard.m; sourceTree = "<group>"; };
+		94938399163F24B90098768D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D9E2430E42114D2AADC68FDE /* libPods-Specs.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Specs.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F27FF5F51C614060939C8A05 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,7 +90,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9493839A163F24B90098768D /* UIKit.framework in Frameworks */,
 				949382BA163F10CB0098768D /* Foundation.framework in Frameworks */,
+				BB27B502D4684453BCBC9D98 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,9 +100,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				949382C9163F10CB0098768D /* SenTestingKit.framework in Frameworks */,
-				949382CB163F10CB0098768D /* UIKit.framework in Frameworks */,
 				949382CC163F10CB0098768D /* Foundation.framework in Frameworks */,
+				949382C9163F10CB0098768D /* SenTestingKit.framework in Frameworks */,
+				9493839C163F24CB0098768D /* UIKit.framework in Frameworks */,
 				949382CF163F10CB0098768D /* libTypewriter.a in Frameworks */,
 				71541D498DE648BFA8261402 /* libPods-Specs.a in Frameworks */,
 			);
@@ -97,9 +112,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				949382F2163F117C0098768D /* UIKit.framework in Frameworks */,
-				949382F3163F117C0098768D /* Foundation.framework in Frameworks */,
 				949382F5163F117C0098768D /* CoreGraphics.framework in Frameworks */,
+				949382F3163F117C0098768D /* Foundation.framework in Frameworks */,
+				9493839B163F24C60098768D /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,6 +129,7 @@
 				949382E5163F11010098768D /* Specs */,
 				949382B8163F10CB0098768D /* Frameworks */,
 				949382B7163F10CB0098768D /* Products */,
+				0B85CCF52CC5408E84CD52BE /* Pods.xcconfig */,
 				4A2A28075CFF4C1D996A3BD6 /* Pods-Specs.xcconfig */,
 			);
 			sourceTree = "<group>";
@@ -131,10 +147,11 @@
 		949382B8163F10CB0098768D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				949382F4163F117C0098768D /* CoreGraphics.framework */,
 				949382B9163F10CB0098768D /* Foundation.framework */,
 				949382C8163F10CB0098768D /* SenTestingKit.framework */,
-				949382CA163F10CB0098768D /* UIKit.framework */,
-				949382F4163F117C0098768D /* CoreGraphics.framework */,
+				94938399163F24B90098768D /* UIKit.framework */,
+				F27FF5F51C614060939C8A05 /* libPods.a */,
 				D9E2430E42114D2AADC68FDE /* libPods-Specs.a */,
 			);
 			name = Frameworks;
@@ -143,6 +160,10 @@
 		949382BB163F10CB0098768D /* Typewriter */ = {
 			isa = PBXGroup;
 			children = (
+				94938327163F17440098768D /* UIApplication+TWRKeyboard.h */,
+				94938328163F17440098768D /* UIApplication+TWRKeyboard.m */,
+				94938329163F17440098768D /* UIView+TWRSearching.h */,
+				9493832A163F17440098768D /* UIView+TWRSearching.m */,
 				949382BC163F10CB0098768D /* Supporting Files */,
 			);
 			path = Typewriter;
@@ -159,6 +180,8 @@
 		949382E5163F11010098768D /* Specs */ = {
 			isa = PBXGroup;
 			children = (
+				94938343163F21C70098768D /* TWRApplicationKeyboard.m */,
+				94938333163F180A0098768D /* TWRSpecHelper.h */,
 				949382EB163F11430098768D /* Supporting Files */,
 			);
 			path = Specs;
@@ -204,6 +227,7 @@
 				949382B2163F10CA0098768D /* Sources */,
 				949382B3163F10CA0098768D /* Frameworks */,
 				949382B4163F10CA0098768D /* CopyFiles */,
+				33C36BA4E742459BADADFD0F /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -301,6 +325,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		33C36BA4E742459BADADFD0F /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+		};
 		547ABC244AF446EA9BF5A8DD /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -335,6 +373,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9493832B163F17440098768D /* UIApplication+TWRKeyboard.m in Sources */,
+				9493832C163F17440098768D /* UIView+TWRSearching.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,6 +382,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94938344163F21C70098768D /* TWRApplicationKeyboard.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,6 +479,7 @@
 		};
 		949382DC163F10CB0098768D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0B85CCF52CC5408E84CD52BE /* Pods.xcconfig */;
 			buildSettings = {
 				DSTROOT = /tmp/Typewriter.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -450,6 +492,7 @@
 		};
 		949382DD163F10CB0098768D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0B85CCF52CC5408E84CD52BE /* Pods.xcconfig */;
 			buildSettings = {
 				DSTROOT = /tmp/Typewriter.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
