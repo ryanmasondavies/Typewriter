@@ -251,6 +251,7 @@
 		949382AD163F10CA0098768D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = TWR;
 				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = "Ryan Davies";
 			};
