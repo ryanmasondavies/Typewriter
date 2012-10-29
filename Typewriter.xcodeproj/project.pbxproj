@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		71541D498DE648BFA8261402 /* libPods-Specs.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D9E2430E42114D2AADC68FDE /* libPods-Specs.a */; };
 		949382BA163F10CB0098768D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 949382B9163F10CB0098768D /* Foundation.framework */; };
 		949382C9163F10CB0098768D /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 949382C8163F10CB0098768D /* SenTestingKit.framework */; };
 		949382CB163F10CB0098768D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 949382CA163F10CB0098768D /* UIKit.framework */; };
@@ -51,12 +52,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4A2A28075CFF4C1D996A3BD6 /* Pods-Specs.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Specs.xcconfig"; path = "Pods/Pods-Specs.xcconfig"; sourceTree = SOURCE_ROOT; };
 		949382B6163F10CB0098768D /* libTypewriter.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTypewriter.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		949382B9163F10CB0098768D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		949382B9163F10CB0098768D /* Foundation.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		949382BD163F10CB0098768D /* Typewriter-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Typewriter-Prefix.pch"; sourceTree = "<group>"; };
 		949382C7163F10CB0098768D /* Specs.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Specs.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		949382C8163F10CB0098768D /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		949382CA163F10CB0098768D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		949382C8163F10CB0098768D /* SenTestingKit.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		949382CA163F10CB0098768D /* UIKit.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		949382E7163F11010098768D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		949382E8163F11010098768D /* Specs-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Specs-Info.plist"; sourceTree = "<group>"; };
 		949382F0163F117C0098768D /* TestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -67,6 +69,7 @@
 		949382FE163F117D0098768D /* TestApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TestApp-Prefix.pch"; sourceTree = "<group>"; };
 		949382FF163F117D0098768D /* TWRAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TWRAppDelegate.h; sourceTree = "<group>"; };
 		94938300163F117D0098768D /* TWRAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TWRAppDelegate.m; sourceTree = "<group>"; };
+		D9E2430E42114D2AADC68FDE /* libPods-Specs.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Specs.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +89,7 @@
 				949382CB163F10CB0098768D /* UIKit.framework in Frameworks */,
 				949382CC163F10CB0098768D /* Foundation.framework in Frameworks */,
 				949382CF163F10CB0098768D /* libTypewriter.a in Frameworks */,
+				71541D498DE648BFA8261402 /* libPods-Specs.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,6 +114,7 @@
 				949382E5163F11010098768D /* Specs */,
 				949382B8163F10CB0098768D /* Frameworks */,
 				949382B7163F10CB0098768D /* Products */,
+				4A2A28075CFF4C1D996A3BD6 /* Pods-Specs.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -130,6 +135,7 @@
 				949382C8163F10CB0098768D /* SenTestingKit.framework */,
 				949382CA163F10CB0098768D /* UIKit.framework */,
 				949382F4163F117C0098768D /* CoreGraphics.framework */,
+				D9E2430E42114D2AADC68FDE /* libPods-Specs.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -216,6 +222,7 @@
 				949382C3163F10CB0098768D /* Frameworks */,
 				949382C4163F10CB0098768D /* Resources */,
 				949382C5163F10CB0098768D /* ShellScript */,
+				547ABC244AF446EA9BF5A8DD /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -294,6 +301,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		547ABC244AF446EA9BF5A8DD /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-Specs-resources.sh\"\n";
+		};
 		949382C5163F10CB0098768D /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -441,12 +462,9 @@
 		};
 		949382DF163F10CB0098768D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A2A28075CFF4C1D996A3BD6 /* Pods-Specs.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TestApp.app/TestApp";
-				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
-				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Typewriter/Typewriter-Prefix.pch";
 				INFOPLIST_FILE = "Specs/Specs-Info.plist";
@@ -458,12 +476,9 @@
 		};
 		949382E0163F10CB0098768D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A2A28075CFF4C1D996A3BD6 /* Pods-Specs.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TestApp.app/TestApp";
-				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
-				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Typewriter/Typewriter-Prefix.pch";
 				INFOPLIST_FILE = "Specs/Specs-Info.plist";
@@ -545,6 +560,7 @@
 				9493830A163F117D0098768D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
