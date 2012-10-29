@@ -13,7 +13,12 @@
 		949382CC163F10CB0098768D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 949382B9163F10CB0098768D /* Foundation.framework */; };
 		949382CF163F10CB0098768D /* libTypewriter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 949382B6163F10CB0098768D /* libTypewriter.a */; };
 		949382E9163F11010098768D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 949382E6163F11010098768D /* InfoPlist.strings */; };
-		949382EA163F11010098768D /* Specs-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 949382E8163F11010098768D /* Specs-Info.plist */; };
+		949382F2163F117C0098768D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 949382CA163F10CB0098768D /* UIKit.framework */; };
+		949382F3163F117C0098768D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 949382B9163F10CB0098768D /* Foundation.framework */; };
+		949382F5163F117C0098768D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 949382F4163F117C0098768D /* CoreGraphics.framework */; };
+		949382FB163F117C0098768D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 949382F9163F117C0098768D /* InfoPlist.strings */; };
+		949382FD163F117D0098768D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 949382FC163F117D0098768D /* main.m */; };
+		94938301163F117D0098768D /* TWRAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 94938300163F117D0098768D /* TWRAppDelegate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,6 +28,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 949382B5163F10CA0098768D;
 			remoteInfo = Typewriter;
+		};
+		9493830B163F126D0098768D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 949382AD163F10CA0098768D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 949382EF163F117C0098768D;
+			remoteInfo = TestApp;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -47,6 +59,14 @@
 		949382CA163F10CB0098768D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		949382E7163F11010098768D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		949382E8163F11010098768D /* Specs-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Specs-Info.plist"; sourceTree = "<group>"; };
+		949382F0163F117C0098768D /* TestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		949382F4163F117C0098768D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		949382F8163F117C0098768D /* TestApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TestApp-Info.plist"; sourceTree = "<group>"; };
+		949382FA163F117C0098768D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		949382FC163F117D0098768D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		949382FE163F117D0098768D /* TestApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TestApp-Prefix.pch"; sourceTree = "<group>"; };
+		949382FF163F117D0098768D /* TWRAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TWRAppDelegate.h; sourceTree = "<group>"; };
+		94938300163F117D0098768D /* TWRAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TWRAppDelegate.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +89,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		949382ED163F117C0098768D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				949382F2163F117C0098768D /* UIKit.framework in Frameworks */,
+				949382F3163F117C0098768D /* Foundation.framework in Frameworks */,
+				949382F5163F117C0098768D /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -76,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				949382BB163F10CB0098768D /* Typewriter */,
+				949382F6163F117C0098768D /* TestApp */,
 				949382E5163F11010098768D /* Specs */,
 				949382B8163F10CB0098768D /* Frameworks */,
 				949382B7163F10CB0098768D /* Products */,
@@ -87,6 +118,7 @@
 			children = (
 				949382B6163F10CB0098768D /* libTypewriter.a */,
 				949382C7163F10CB0098768D /* Specs.octest */,
+				949382F0163F117C0098768D /* TestApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -97,6 +129,7 @@
 				949382B9163F10CB0098768D /* Foundation.framework */,
 				949382C8163F10CB0098768D /* SenTestingKit.framework */,
 				949382CA163F10CB0098768D /* UIKit.framework */,
+				949382F4163F117C0098768D /* CoreGraphics.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -134,6 +167,27 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		949382F6163F117C0098768D /* TestApp */ = {
+			isa = PBXGroup;
+			children = (
+				949382FF163F117D0098768D /* TWRAppDelegate.h */,
+				94938300163F117D0098768D /* TWRAppDelegate.m */,
+				949382F7163F117C0098768D /* Supporting Files */,
+			);
+			path = TestApp;
+			sourceTree = "<group>";
+		};
+		949382F7163F117C0098768D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				949382F8163F117C0098768D /* TestApp-Info.plist */,
+				949382F9163F117C0098768D /* InfoPlist.strings */,
+				949382FC163F117D0098768D /* main.m */,
+				949382FE163F117D0098768D /* TestApp-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -166,12 +220,30 @@
 			buildRules = (
 			);
 			dependencies = (
+				9493830C163F126D0098768D /* PBXTargetDependency */,
 				949382CE163F10CB0098768D /* PBXTargetDependency */,
 			);
 			name = Specs;
 			productName = TypewriterTests;
 			productReference = 949382C7163F10CB0098768D /* Specs.octest */;
 			productType = "com.apple.product-type.bundle";
+		};
+		949382EF163F117C0098768D /* TestApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 94938308163F117D0098768D /* Build configuration list for PBXNativeTarget "TestApp" */;
+			buildPhases = (
+				949382EC163F117C0098768D /* Sources */,
+				949382ED163F117C0098768D /* Frameworks */,
+				949382EE163F117C0098768D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TestApp;
+			productName = TestApp;
+			productReference = 949382F0163F117C0098768D /* TestApp.app */;
+			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
@@ -195,6 +267,7 @@
 			projectRoot = "";
 			targets = (
 				949382B5163F10CA0098768D /* Typewriter */,
+				949382EF163F117C0098768D /* TestApp */,
 				949382C6163F10CB0098768D /* Specs */,
 			);
 		};
@@ -206,7 +279,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				949382E9163F11010098768D /* InfoPlist.strings in Resources */,
-				949382EA163F11010098768D /* Specs-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		949382EE163F117C0098768D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				949382FB163F117C0098768D /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,6 +323,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		949382EC163F117C0098768D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				949382FD163F117D0098768D /* main.m in Sources */,
+				94938301163F117D0098768D /* TWRAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -251,6 +340,11 @@
 			target = 949382B5163F10CA0098768D /* Typewriter */;
 			targetProxy = 949382CD163F10CB0098768D /* PBXContainerItemProxy */;
 		};
+		9493830C163F126D0098768D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 949382EF163F117C0098768D /* TestApp */;
+			targetProxy = 9493830B163F126D0098768D /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -258,6 +352,14 @@
 			isa = PBXVariantGroup;
 			children = (
 				949382E7163F11010098768D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		949382F9163F117C0098768D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				949382FA163F117C0098768D /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -339,6 +441,7 @@
 		949382DF163F10CB0098768D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TestApp.app/TestApp";
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
@@ -347,6 +450,7 @@
 				GCC_PREFIX_HEADER = "Typewriter/Typewriter-Prefix.pch";
 				INFOPLIST_FILE = "Specs/Specs-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
@@ -354,6 +458,7 @@
 		949382E0163F10CB0098768D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TestApp.app/TestApp";
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
@@ -362,7 +467,43 @@
 				GCC_PREFIX_HEADER = "Typewriter/Typewriter-Prefix.pch";
 				INFOPLIST_FILE = "Specs/Specs-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+		94938309163F117D0098768D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TestApp/TestApp-Prefix.pch";
+				INFOPLIST_FILE = "TestApp/TestApp-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		9493830A163F117D0098768D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TestApp/TestApp-Prefix.pch";
+				INFOPLIST_FILE = "TestApp/TestApp-Info.plist";
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
 		};
@@ -395,6 +536,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		94938308163F117D0098768D /* Build configuration list for PBXNativeTarget "TestApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				94938309163F117D0098768D /* Debug */,
+				9493830A163F117D0098768D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
