@@ -23,7 +23,6 @@
 		9493839B163F24C60098768D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94938399163F24B90098768D /* UIKit.framework */; };
 		9493839C163F24CB0098768D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94938399163F24B90098768D /* UIKit.framework */; };
 		94A8A1EE163FDFAC003425BA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 949382F4163F117C0098768D /* CoreGraphics.framework */; };
-		94A8A1F0163FE007003425BA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 949382F4163F117C0098768D /* CoreGraphics.framework */; };
 		94A8A1F5163FE480003425BA /* UIKBKeyplaneView.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A8A1F4163FE480003425BA /* UIKBKeyplaneView.m */; };
 		94A8A1F7163FE49A003425BA /* UIKBTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A8A1F6163FE49A003425BA /* UIKBTree.m */; };
 		94A8A1FD163FE765003425BA /* TWRTypist.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A8A1FB163FE765003425BA /* TWRTypist.m */; };
@@ -134,7 +133,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				94A8A1F0163FE007003425BA /* CoreGraphics.framework in Frameworks */,
 				949382CC163F10CB0098768D /* Foundation.framework in Frameworks */,
 				949382C9163F10CB0098768D /* SenTestingKit.framework in Frameworks */,
 				9493839C163F24CB0098768D /* UIKit.framework in Frameworks */,

@@ -21,7 +21,9 @@
 {
     UIKBTree *key = [self key];
     if (key) {
-        CGPoint keyCenter = (CGPoint){CGRectGetMidX([key frame]), CGRectGetMidY([key frame])};
+        CGPoint keyCenter;
+        keyCenter.x = key.frame.origin.x + (key.frame.size.width / 2);
+        keyCenter.y = key.frame.origin.y + (key.frame.size.height / 2);
         [[[UIApplication sharedApplication] keyplaneView] tapAtPosition:keyCenter];
     }
 }
