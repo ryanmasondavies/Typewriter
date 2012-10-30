@@ -217,11 +217,11 @@
 		949382E5163F11010098768D /* Specs */ = {
 			isa = PBXGroup;
 			children = (
-				94A8A22116401C7C003425BA /* Integrated */,
-				94A8A22016401C71003425BA /* Unit */,
 				94938333163F180A0098768D /* TWRSpecHelper.h */,
 				94A8A218163FFF62003425BA /* TWRTestViewController.h */,
 				94A8A219163FFF62003425BA /* TWRTestViewController.m */,
+				94A8A22116401C7C003425BA /* Integrated */,
+				94A8A22016401C71003425BA /* Unit */,
 				949382EB163F11430098768D /* Supporting Files */,
 			);
 			path = Specs;
