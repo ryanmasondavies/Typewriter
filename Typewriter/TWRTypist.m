@@ -43,6 +43,7 @@
     
     [[self stack] enumerateObjectsUsingBlock:^(TWRTypingCommand *command, NSUInteger idx, BOOL *stop) {
         [command execute];
+        CFRunLoopRunInMode(kCFRunLoopDefaultMode, 0.05f, NO);
     }];
 }
 
