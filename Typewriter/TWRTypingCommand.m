@@ -23,7 +23,7 @@
     if (key) {
         CGPoint keyCenter = (CGPoint){CGRectGetMidX([key frame]), CGRectGetMidY([key frame])};
         [[[UIApplication sharedApplication] keyplaneView] tapAtPosition:keyCenter];
-        CFRunLoopRunInMode(kCFRunLoopDefaultMode, 0.8, NO);
+        NSLog(@"Pressed %@", [key representedString]);
     }
 }
 

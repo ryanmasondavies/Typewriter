@@ -13,27 +13,35 @@
 
 @implementation TWRTypist
 
+- (id)init
+{
+    self = [super init];
+    if (self) {
+        self.stack = [[NSMutableArray alloc] init];
+    }
+    
+    return self;
+}
+
 - (void)enterString:(NSString *)string
 {
-    NSMutableArray *commandStack = [NSMutableArray array];
-    
     for (NSUInteger index = 0; index < [string length]; index ++) {
         unichar character = [string characterAtIndex:index];
         
         if ([[NSCharacterSet uppercaseLetterCharacterSet] characterIsMember:character]) {
-            [commandStack addObject:[TWRPressShiftCommand new]];
+            [[self stack] addObject:[TWRPressShiftCommand new]];
         }
         
         if (character == ' ') {
-            [commandStack addObject:[TWRPressSpaceCommand new]];
+            [[self stack] addObject:[TWRPressSpaceCommand new]];
         } else {
             TWREnterCharacterCommand *enterCharacter = [[TWREnterCharacterCommand alloc] init];
             [enterCharacter setCharacter:character];
-            [commandStack addObject:enterCharacter];
+            [[self stack] addObject:enterCharacter];
         }
     }
     
-    [commandStack enumerateObjectsUsingBlock:^(TWRTypingCommand *command, NSUInteger idx, BOOL *stop) {
+    [[self stack] enumerateObjectsUsingBlock:^(TWRTypingCommand *command, NSUInteger idx, BOOL *stop) {
         [command execute];
     }];
 }

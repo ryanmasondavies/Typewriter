@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface TWRTypist : NSObject
+@property (strong, nonatomic) NSMutableArray *stack;
 
 - (void)enterString:(NSString *)string;
 

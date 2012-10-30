@@ -8,38 +8,49 @@
 
 #import "TWRSpecHelper.h"
 #import "TWRTypist.h"
+#import "TWREnterCharacterCommand.h"
+#import "TWRPressSpaceCommand.h"
+#import "TWRPressShiftCommand.h"
 
 SpecBegin(TWRTypist)
 
-__block TWRTestViewController *viewController;
-__block TWRTypist *typist;
-
-before(^{
-    viewController = [[TWRTestViewController alloc] init];
-    typist = [[TWRTypist alloc] init];
+it(@"should add enter character commands for each letter in the string", ^{
+    TWRTypist *typist = [[TWRTypist alloc] init];
+    NSMutableArray *stack = [[NSMutableArray alloc] init];
+    [typist setStack:stack];
+    
+    [typist enterString:@"hello"];
+    
+    expect(stack).to.haveCountOf(5);
+    
+    unichar expected[5] = {'h', 'e', 'l', 'l', 'o'};
+    for (NSUInteger i = 0; i < 5; i ++) {
+        expect([stack objectAtIndex:i]).to.beKindOf([TWREnterCharacterCommand class]);
+        expect([[stack objectAtIndex:i] character]).to.equal(expected[i]);
+    }
 });
 
-describe(@"when the keyboard is in lowercase", ^{
-    before(^{
-        [[[UIApplication sharedApplication] keyWindow] setRootViewController:viewController];
-        [[viewController textField] setAutocapitalizationType:UITextAutocapitalizationTypeNone];
-        [[viewController textField] becomeFirstResponder];
-    });
+it(@"should add space character commands for each space in the string", ^{
+    TWRTypist *typist = [[TWRTypist alloc] init];
+    NSMutableArray *stack = [[NSMutableArray alloc] init];
+    [typist setStack:stack];
     
-    it(@"should type lowercase keys", ^{
-        [typist enterString:@"hello"];
-        expect([[viewController textField] text]).to.equal(@"hello");
-    });
+    [typist enterString:@"hello world"];
     
-    it(@"should type spaces", ^{
-        [typist enterString:@" "];
-        expect([[viewController textField] text]).to.equal(@" ");
-    });
+    expect(stack).to.haveCountOf(11);
+    expect([stack objectAtIndex:5]).to.beKindOf([TWRPressSpaceCommand class]);
+});
+
+it(@"should add a command for pressing the shift button before every uppercase letter in the string", ^{
+    TWRTypist *typist = [[TWRTypist alloc] init];
+    NSMutableArray *stack = [[NSMutableArray alloc] init];
+    [typist setStack:stack];
     
-    it(@"should type uppercase letters", ^{
-        [typist enterString:@"HELLO"];
-        expect([[viewController textField] text]).to.equal(@"HELLO");
-    });
+    [typist enterString:@"Hello World"];
+    
+    expect(stack).to.haveCountOf(13);
+    expect([stack objectAtIndex:0]).to.beKindOf([TWRPressShiftCommand class]);
+    expect([stack objectAtIndex:7]).to.beKindOf([TWRPressShiftCommand class]);
 });
 
 SpecEnd
