@@ -26,4 +26,8 @@ it(@"should enter the text 'Hello World'", ^{
     expect([[viewController textField] text]).to.equal(@"Hello World");
 });
 
+after(^{
+    [[[UIApplication sharedApplication] keyWindow] setRootViewController:nil];
+});
+
 SpecEnd

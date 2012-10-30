@@ -16,16 +16,18 @@ __block TWRPressSpaceCommand *pressSpaceCommand;
 
 before(^{
     viewController = [[TWRTestViewController alloc] init];
-    
+    pressSpaceCommand = [[TWRPressSpaceCommand alloc] init];
     [[[UIApplication sharedApplication] keyWindow] setRootViewController:viewController];
     [[viewController textField] becomeFirstResponder];
-    
-    pressSpaceCommand = [[TWRPressSpaceCommand alloc] init];
 });
 
 it(@"should enter a space character", ^{
     [pressSpaceCommand execute];
     expect([[viewController textField] text]).to.equal(@" ");
+});
+
+after(^{
+    [[[UIApplication sharedApplication] keyWindow] setRootViewController:nil];
 });
 
 SpecEnd

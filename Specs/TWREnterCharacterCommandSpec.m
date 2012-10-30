@@ -346,4 +346,8 @@ context(@"when the keyboard is displaying uppercase characters", ^{
     });
 });
 
+after(^{
+    [[[UIApplication sharedApplication] keyWindow] setRootViewController:nil];
+});
+
 SpecEnd

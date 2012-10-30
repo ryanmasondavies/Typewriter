@@ -37,4 +37,8 @@ it(@"should change the keyboard to display uppercase keys when the keyboard is d
     expect([[[[UIApplication sharedApplication] keyplaneView] keyplane] isShiftKeyplane]).to.beTruthy();
 });
 
+after(^{
+    [[[UIApplication sharedApplication] keyWindow] setRootViewController:nil];
+});
+
 SpecEnd
