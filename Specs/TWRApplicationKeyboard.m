@@ -8,12 +8,12 @@
 
 #import "TWRSpecHelper.h"
 #import "UIApplication+TWRKeyboard.h"
-#import "TWRKeyboard.h"
+#import <Handsy/UIView+HDYGestures.h>
 
 SpecBegin(TWRApplicationKeyboard)
 
-describe(@"-keyboard", ^{
-    it(@"should return the keyboard when displayed", ^{
+describe(@"-keyboardView", ^{
+    it(@"should return the keyboard view when displayed", ^{
         UIViewController *viewController = [[UIViewController alloc] init];
         
         UITextField *textField = [[UITextField alloc] init];
@@ -24,8 +24,8 @@ describe(@"-keyboard", ^{
         
         [textField becomeFirstResponder];
         
-        TWRKeyboard *keyboard = [[UIApplication sharedApplication] keyboard];
-        expect([keyboard view]).to.beKindOf(NSClassFromString(@"UIKeyboardAutomatic"));
+        UIKBKeyplaneView *keyboardView = [[UIApplication sharedApplication] keyboardView];
+        expect(keyboardView).toNot.beNil();
     });
     
     it(@"should return nil when they keyboard is not displayed", ^{
@@ -37,8 +37,8 @@ describe(@"-keyboard", ^{
         
         [[[UIApplication sharedApplication] keyWindow] setRootViewController:viewController];
         
-        TWRKeyboard *keyboard = [[UIApplication sharedApplication] keyboard];
-        expect([keyboard view]).to.beNil();
+        UIKBKeyplaneView *keyboardView = [[UIApplication sharedApplication] keyboardView];
+        expect(keyboardView).to.beNil();
     });
 });
 

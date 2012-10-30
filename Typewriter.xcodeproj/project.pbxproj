@@ -24,6 +24,10 @@
 		9493839A163F24B90098768D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94938399163F24B90098768D /* UIKit.framework */; };
 		9493839B163F24C60098768D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94938399163F24B90098768D /* UIKit.framework */; };
 		9493839C163F24CB0098768D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94938399163F24B90098768D /* UIKit.framework */; };
+		94A8A1EE163FDFAC003425BA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 949382F4163F117C0098768D /* CoreGraphics.framework */; };
+		94A8A1F0163FE007003425BA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 949382F4163F117C0098768D /* CoreGraphics.framework */; };
+		94A8A1F5163FE480003425BA /* UIKBKeyplaneView.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A8A1F4163FE480003425BA /* UIKBKeyplaneView.m */; };
+		94A8A1F7163FE49A003425BA /* UIKBTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A8A1F6163FE49A003425BA /* UIKBTree.m */; };
 		BB27B502D4684453BCBC9D98 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F27FF5F51C614060939C8A05 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -81,6 +85,10 @@
 		94938333163F180A0098768D /* TWRSpecHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TWRSpecHelper.h; sourceTree = "<group>"; };
 		94938343163F21C70098768D /* TWRApplicationKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWRApplicationKeyboard.m; sourceTree = "<group>"; };
 		94938399163F24B90098768D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		94A8A1F2163FE241003425BA /* UIKBKeyplaneView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIKBKeyplaneView.h; sourceTree = "<group>"; };
+		94A8A1F3163FE254003425BA /* UIKBTree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIKBTree.h; sourceTree = "<group>"; };
+		94A8A1F4163FE480003425BA /* UIKBKeyplaneView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIKBKeyplaneView.m; sourceTree = "<group>"; };
+		94A8A1F6163FE49A003425BA /* UIKBTree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIKBTree.m; sourceTree = "<group>"; };
 		D9E2430E42114D2AADC68FDE /* libPods-Specs.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Specs.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F27FF5F51C614060939C8A05 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -90,8 +98,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9493839A163F24B90098768D /* UIKit.framework in Frameworks */,
+				94A8A1EE163FDFAC003425BA /* CoreGraphics.framework in Frameworks */,
 				949382BA163F10CB0098768D /* Foundation.framework in Frameworks */,
+				9493839A163F24B90098768D /* UIKit.framework in Frameworks */,
 				BB27B502D4684453BCBC9D98 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -100,6 +109,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94A8A1F0163FE007003425BA /* CoreGraphics.framework in Frameworks */,
 				949382CC163F10CB0098768D /* Foundation.framework in Frameworks */,
 				949382C9163F10CB0098768D /* SenTestingKit.framework in Frameworks */,
 				9493839C163F24CB0098768D /* UIKit.framework in Frameworks */,
@@ -164,6 +174,7 @@
 				94938328163F17440098768D /* UIApplication+TWRKeyboard.m */,
 				94938329163F17440098768D /* UIView+TWRSearching.h */,
 				9493832A163F17440098768D /* UIView+TWRSearching.m */,
+				94A8A1F1163FE237003425BA /* Private APIs */,
 				949382BC163F10CB0098768D /* Supporting Files */,
 			);
 			path = Typewriter;
@@ -215,6 +226,17 @@
 				949382FE163F117D0098768D /* TestApp-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		94A8A1F1163FE237003425BA /* Private APIs */ = {
+			isa = PBXGroup;
+			children = (
+				94A8A1F2163FE241003425BA /* UIKBKeyplaneView.h */,
+				94A8A1F4163FE480003425BA /* UIKBKeyplaneView.m */,
+				94A8A1F3163FE254003425BA /* UIKBTree.h */,
+				94A8A1F6163FE49A003425BA /* UIKBTree.m */,
+			);
+			name = "Private APIs";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -375,6 +397,8 @@
 			files = (
 				9493832B163F17440098768D /* UIApplication+TWRKeyboard.m in Sources */,
 				9493832C163F17440098768D /* UIView+TWRSearching.m in Sources */,
+				94A8A1F5163FE480003425BA /* UIKBKeyplaneView.m in Sources */,
+				94A8A1F7163FE49A003425BA /* UIKBTree.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

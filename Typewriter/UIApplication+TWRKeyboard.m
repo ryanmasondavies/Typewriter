@@ -8,11 +8,10 @@
 
 #import "UIApplication+TWRKeyboard.h"
 #import "UIView+TWRSearching.h"
-#import "TWRKeyboard.h"
 
 @implementation UIApplication (TWRKeyboard)
 
-- (TWRKeyboard *)keyboard
+- (UIKBKeyplaneView *)keyboardView
 {
     __block UIWindow *keyboardWindow = nil;
     [[self windows] enumerateObjectsUsingBlock:^(UIWindow *window, NSUInteger idx, BOOL *stop) {
@@ -23,13 +22,13 @@
     }];
     
     BOOL(^classCheck)(UIView *subview, NSUInteger index, BOOL *stop) = ^BOOL(UIView *subview, NSUInteger index, BOOL *stop) {
-        return [subview isKindOfClass:NSClassFromString(@"UIKeyboardAutomatic")];
+        return [subview isKindOfClass:NSClassFromString(@"UIKBKeyplaneView")];
     };
     
     NSArray *possibleKeyboards = [keyboardWindow subviewsPassingTest:classCheck recursive:YES];
-    UIView *keyboardView = [possibleKeyboards lastObject];
+    UIKBKeyplaneView *keyboardView = [possibleKeyboards lastObject];
     
-    return [[TWRKeyboard alloc] initWithView:keyboardView];
+    return keyboardView;
 }
 
 @end

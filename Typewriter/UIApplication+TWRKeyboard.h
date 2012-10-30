@@ -7,11 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@class TWRKeyboard;
+#import "UIKBKeyplaneView.h"
 
 @interface UIApplication (TWRKeyboard)
 
-- (TWRKeyboard *)keyboard;
+- (UIKBKeyplaneView *)keyboardView;
 
 @end
