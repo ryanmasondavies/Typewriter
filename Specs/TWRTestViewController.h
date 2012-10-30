@@ -1,5 +1,5 @@
 //
-//  UIKBKeyplaneView.h
+//  TWRTestViewController.h
 //  Typewriter
 //
 //  Created by Ryan Davies on 30/10/2012.
@@ -7,8 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "UIKBTree.h"
 
-@interface UIKBKeyplaneView : UIView
-@property (readonly) UIKBTree *keyplane;
+@interface TWRTestViewController : UIViewController
+@property (strong, nonatomic) UITextField *textField;
 @end

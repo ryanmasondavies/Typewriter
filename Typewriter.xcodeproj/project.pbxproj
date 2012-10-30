@@ -19,8 +19,6 @@
 		949382FD163F117D0098768D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 949382FC163F117D0098768D /* main.m */; };
 		94938301163F117D0098768D /* TWRAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 94938300163F117D0098768D /* TWRAppDelegate.m */; };
 		9493832B163F17440098768D /* UIApplication+TWRKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 94938328163F17440098768D /* UIApplication+TWRKeyboard.m */; };
-		9493832C163F17440098768D /* UIView+TWRSearching.m in Sources */ = {isa = PBXBuildFile; fileRef = 9493832A163F17440098768D /* UIView+TWRSearching.m */; };
-		94938344163F21C70098768D /* TWRApplicationKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 94938343163F21C70098768D /* TWRApplicationKeyboard.m */; };
 		9493839A163F24B90098768D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94938399163F24B90098768D /* UIKit.framework */; };
 		9493839B163F24C60098768D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94938399163F24B90098768D /* UIKit.framework */; };
 		9493839C163F24CB0098768D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94938399163F24B90098768D /* UIKit.framework */; };
@@ -29,7 +27,16 @@
 		94A8A1F5163FE480003425BA /* UIKBKeyplaneView.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A8A1F4163FE480003425BA /* UIKBKeyplaneView.m */; };
 		94A8A1F7163FE49A003425BA /* UIKBTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A8A1F6163FE49A003425BA /* UIKBTree.m */; };
 		94A8A1FD163FE765003425BA /* TWRTypist.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A8A1FB163FE765003425BA /* TWRTypist.m */; };
-		94A8A201163FE76B003425BA /* TWRTypistSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A8A1FF163FE76B003425BA /* TWRTypistSpec.m */; };
+		94A8A205163FF5FE003425BA /* TWRTypingCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A8A204163FF5FE003425BA /* TWRTypingCommand.m */; };
+		94A8A20B163FFA00003425BA /* TWREnterCharacterCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A8A20A163FFA00003425BA /* TWREnterCharacterCommand.m */; };
+		94A8A20E163FFA7B003425BA /* TWRPressShiftCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A8A20D163FFA7B003425BA /* TWRPressShiftCommand.m */; };
+		94A8A211163FFA8F003425BA /* TWRPressSpaceCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A8A210163FFA8F003425BA /* TWRPressSpaceCommand.m */; };
+		94A8A216163FFC76003425BA /* TWRPressShiftCommandSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A8A213163FFC76003425BA /* TWRPressShiftCommandSpec.m */; };
+		94A8A21A163FFF62003425BA /* TWRTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A8A219163FFF62003425BA /* TWRTestViewController.m */; };
+		94A8A21B164004C0003425BA /* TWRPressSpaceCommandSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A8A214163FFC76003425BA /* TWRPressSpaceCommandSpec.m */; };
+		94A8A21C164005FA003425BA /* TWRTypistSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A8A1FF163FE76B003425BA /* TWRTypistSpec.m */; };
+		94A8A21D164005FB003425BA /* TWRApplicationKeyboardSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 94938343163F21C70098768D /* TWRApplicationKeyboardSpec.m */; };
+		94A8A21E164005FD003425BA /* TWREnterCharacterCommandSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A8A212163FFC76003425BA /* TWREnterCharacterCommandSpec.m */; };
 		BB27B502D4684453BCBC9D98 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F27FF5F51C614060939C8A05 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -82,10 +89,8 @@
 		94938300163F117D0098768D /* TWRAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TWRAppDelegate.m; sourceTree = "<group>"; };
 		94938327163F17440098768D /* UIApplication+TWRKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+TWRKeyboard.h"; sourceTree = "<group>"; };
 		94938328163F17440098768D /* UIApplication+TWRKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+TWRKeyboard.m"; sourceTree = "<group>"; };
-		94938329163F17440098768D /* UIView+TWRSearching.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+TWRSearching.h"; sourceTree = "<group>"; };
-		9493832A163F17440098768D /* UIView+TWRSearching.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+TWRSearching.m"; sourceTree = "<group>"; };
 		94938333163F180A0098768D /* TWRSpecHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TWRSpecHelper.h; sourceTree = "<group>"; };
-		94938343163F21C70098768D /* TWRApplicationKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWRApplicationKeyboard.m; sourceTree = "<group>"; };
+		94938343163F21C70098768D /* TWRApplicationKeyboardSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWRApplicationKeyboardSpec.m; sourceTree = "<group>"; };
 		94938399163F24B90098768D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		94A8A1F2163FE241003425BA /* UIKBKeyplaneView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIKBKeyplaneView.h; sourceTree = "<group>"; };
 		94A8A1F3163FE254003425BA /* UIKBTree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIKBTree.h; sourceTree = "<group>"; };
@@ -94,6 +99,19 @@
 		94A8A1FA163FE765003425BA /* TWRTypist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWRTypist.h; sourceTree = "<group>"; };
 		94A8A1FB163FE765003425BA /* TWRTypist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWRTypist.m; sourceTree = "<group>"; };
 		94A8A1FF163FE76B003425BA /* TWRTypistSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWRTypistSpec.m; sourceTree = "<group>"; };
+		94A8A203163FF5FE003425BA /* TWRTypingCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWRTypingCommand.h; sourceTree = "<group>"; };
+		94A8A204163FF5FE003425BA /* TWRTypingCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWRTypingCommand.m; sourceTree = "<group>"; };
+		94A8A209163FFA00003425BA /* TWREnterCharacterCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWREnterCharacterCommand.h; sourceTree = "<group>"; };
+		94A8A20A163FFA00003425BA /* TWREnterCharacterCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWREnterCharacterCommand.m; sourceTree = "<group>"; };
+		94A8A20C163FFA7B003425BA /* TWRPressShiftCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWRPressShiftCommand.h; sourceTree = "<group>"; };
+		94A8A20D163FFA7B003425BA /* TWRPressShiftCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWRPressShiftCommand.m; sourceTree = "<group>"; };
+		94A8A20F163FFA8F003425BA /* TWRPressSpaceCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWRPressSpaceCommand.h; sourceTree = "<group>"; };
+		94A8A210163FFA8F003425BA /* TWRPressSpaceCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWRPressSpaceCommand.m; sourceTree = "<group>"; };
+		94A8A212163FFC76003425BA /* TWREnterCharacterCommandSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWREnterCharacterCommandSpec.m; sourceTree = "<group>"; };
+		94A8A213163FFC76003425BA /* TWRPressShiftCommandSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWRPressShiftCommandSpec.m; sourceTree = "<group>"; };
+		94A8A214163FFC76003425BA /* TWRPressSpaceCommandSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWRPressSpaceCommandSpec.m; sourceTree = "<group>"; };
+		94A8A218163FFF62003425BA /* TWRTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWRTestViewController.h; sourceTree = "<group>"; };
+		94A8A219163FFF62003425BA /* TWRTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWRTestViewController.m; sourceTree = "<group>"; };
 		D9E2430E42114D2AADC68FDE /* libPods-Specs.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Specs.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F27FF5F51C614060939C8A05 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -179,8 +197,7 @@
 				94A8A1FB163FE765003425BA /* TWRTypist.m */,
 				94938327163F17440098768D /* UIApplication+TWRKeyboard.h */,
 				94938328163F17440098768D /* UIApplication+TWRKeyboard.m */,
-				94938329163F17440098768D /* UIView+TWRSearching.h */,
-				9493832A163F17440098768D /* UIView+TWRSearching.m */,
+				94A8A202163FF5E7003425BA /* Typing commands */,
 				94A8A1F1163FE237003425BA /* Private APIs */,
 				949382BC163F10CB0098768D /* Supporting Files */,
 			);
@@ -199,8 +216,13 @@
 			isa = PBXGroup;
 			children = (
 				94A8A1FF163FE76B003425BA /* TWRTypistSpec.m */,
-				94938343163F21C70098768D /* TWRApplicationKeyboard.m */,
+				94938343163F21C70098768D /* TWRApplicationKeyboardSpec.m */,
+				94A8A212163FFC76003425BA /* TWREnterCharacterCommandSpec.m */,
+				94A8A213163FFC76003425BA /* TWRPressShiftCommandSpec.m */,
+				94A8A214163FFC76003425BA /* TWRPressSpaceCommandSpec.m */,
 				94938333163F180A0098768D /* TWRSpecHelper.h */,
+				94A8A218163FFF62003425BA /* TWRTestViewController.h */,
+				94A8A219163FFF62003425BA /* TWRTestViewController.m */,
 				949382EB163F11430098768D /* Supporting Files */,
 			);
 			path = Specs;
@@ -245,6 +267,21 @@
 				94A8A1F6163FE49A003425BA /* UIKBTree.m */,
 			);
 			name = "Private APIs";
+			sourceTree = "<group>";
+		};
+		94A8A202163FF5E7003425BA /* Typing commands */ = {
+			isa = PBXGroup;
+			children = (
+				94A8A203163FF5FE003425BA /* TWRTypingCommand.h */,
+				94A8A204163FF5FE003425BA /* TWRTypingCommand.m */,
+				94A8A209163FFA00003425BA /* TWREnterCharacterCommand.h */,
+				94A8A20A163FFA00003425BA /* TWREnterCharacterCommand.m */,
+				94A8A20C163FFA7B003425BA /* TWRPressShiftCommand.h */,
+				94A8A20D163FFA7B003425BA /* TWRPressShiftCommand.m */,
+				94A8A20F163FFA8F003425BA /* TWRPressSpaceCommand.h */,
+				94A8A210163FFA8F003425BA /* TWRPressSpaceCommand.m */,
+			);
+			name = "Typing commands";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -404,10 +441,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				9493832B163F17440098768D /* UIApplication+TWRKeyboard.m in Sources */,
-				9493832C163F17440098768D /* UIView+TWRSearching.m in Sources */,
 				94A8A1F5163FE480003425BA /* UIKBKeyplaneView.m in Sources */,
 				94A8A1F7163FE49A003425BA /* UIKBTree.m in Sources */,
 				94A8A1FD163FE765003425BA /* TWRTypist.m in Sources */,
+				94A8A205163FF5FE003425BA /* TWRTypingCommand.m in Sources */,
+				94A8A20B163FFA00003425BA /* TWREnterCharacterCommand.m in Sources */,
+				94A8A20E163FFA7B003425BA /* TWRPressShiftCommand.m in Sources */,
+				94A8A211163FFA8F003425BA /* TWRPressSpaceCommand.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,8 +455,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				94938344163F21C70098768D /* TWRApplicationKeyboard.m in Sources */,
-				94A8A201163FE76B003425BA /* TWRTypistSpec.m in Sources */,
+				94A8A216163FFC76003425BA /* TWRPressShiftCommandSpec.m in Sources */,
+				94A8A21A163FFF62003425BA /* TWRTestViewController.m in Sources */,
+				94A8A21B164004C0003425BA /* TWRPressSpaceCommandSpec.m in Sources */,
+				94A8A21C164005FA003425BA /* TWRTypistSpec.m in Sources */,
+				94A8A21D164005FB003425BA /* TWRApplicationKeyboardSpec.m in Sources */,
+				94A8A21E164005FD003425BA /* TWREnterCharacterCommandSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

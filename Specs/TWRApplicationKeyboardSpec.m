@@ -1,5 +1,5 @@
 //
-//  TWRApplicationKeyboard.m
+//  TWRApplicationKeyboardSpec.m
 //  Typewriter
 //
 //  Created by Ryan Davies on 29/10/2012.

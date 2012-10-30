@@ -7,55 +7,35 @@
 //
 
 #import "TWRTypist.h"
-#import <Handsy/UIView+HDYGestures.h>
-#import "UIApplication+TWRKeyboard.h"
-#import "UIKBTree.h"
+#import "TWREnterCharacterCommand.h"
+#import "TWRPressShiftCommand.h"
+#import "TWRPressSpaceCommand.h"
 
 @implementation TWRTypist
 
 - (void)enterString:(NSString *)string
 {
-    unichar character;
-    UIKBKeyplaneView *keyboardView = [[UIApplication sharedApplication] keyplaneView];
-    UIKBTree *keyplane = [keyboardView keyplane];
+    NSMutableArray *commandStack = [NSMutableArray array];
     
     for (NSUInteger index = 0; index < [string length]; index ++) {
-        character = [string characterAtIndex:index];
+        unichar character = [string characterAtIndex:index];
         
-        NSString *representedString = [NSString stringWithCharacters:(const unichar *)&character length:1];
-        BOOL isUppercase = [[NSCharacterSet uppercaseLetterCharacterSet] characterIsMember:character];
-        
-        if (isUppercase && ([keyplane isShiftKeyplane] == NO)) {
-            // The keyboard stores its represented strings as lowercase, regardless of the shift status:
-            representedString = [representedString lowercaseString];
-            
-            // Find the shift key:
-            __block UIKBTree *shiftKey = nil;
-            [[keyplane keys] enumerateObjectsUsingBlock:^(UIKBTree *node, NSUInteger idx, BOOL *stop) {
-                if ([[node representedString] isEqualToString:@"Shift"]) {
-                    shiftKey = node;
-                    *stop = YES;
-                }
-            }];
-            
-            CGPoint keyCenter = (CGPoint){CGRectGetMidX([shiftKey frame]), CGRectGetMidY([shiftKey frame])};
-            [keyboardView tapAtPosition:keyCenter];
+        if ([[NSCharacterSet uppercaseLetterCharacterSet] characterIsMember:character]) {
+            [commandStack addObject:[TWRPressShiftCommand new]];
         }
         
-        __block UIKBTree *key = nil;
-        [[keyplane keys] enumerateObjectsUsingBlock:^(UIKBTree *node, NSUInteger idx, BOOL *stop) {
-            if ([[node representedString] isEqualToString:representedString]) {
-                NSLog(@"%@ matches %@", representedString, [node representedString]);
-                key = node;
-                *stop = YES;
-            }
-        }];
-        
-        if (key) {
-            CGPoint keyCenter = (CGPoint){CGRectGetMidX([key frame]), CGRectGetMidY([key frame])};
-            [keyboardView tapAtPosition:keyCenter];
+        if (character == ' ') {
+            [commandStack addObject:[TWRPressSpaceCommand new]];
+        } else {
+            TWREnterCharacterCommand *enterCharacter = [[TWREnterCharacterCommand alloc] init];
+            [enterCharacter setCharacter:character];
+            [commandStack addObject:enterCharacter];
         }
     }
+    
+    [commandStack enumerateObjectsUsingBlock:^(TWRTypingCommand *command, NSUInteger idx, BOOL *stop) {
+        [command execute];
+    }];
 }
 
 @end

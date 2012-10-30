@@ -7,7 +7,24 @@
 //
 
 #import "UIApplication+TWRKeyboard.h"
-#import "UIView+TWRSearching.h"
+
+@implementation UIView (TWRSearching)
+
+- (NSArray *)subviewsPassingTest:(BOOL (^)(id object, NSUInteger index, BOOL *stop))test recursive:(BOOL)recursive
+{
+    NSMutableArray *results = [NSMutableArray array];
+    [[self subviews] enumerateObjectsUsingBlock:^(UIView *subview, NSUInteger index, BOOL *stop) {
+        if (test(subview, index, stop))
+            [results addObject:subview];
+        
+        if (recursive)
+            [results addObjectsFromArray:[subview subviewsPassingTest:test recursive:YES]];
+    }];
+    
+    return ([results count] ? [NSArray arrayWithArray:results] : nil);
+}
+
+@end
 
 @implementation UIApplication (TWRKeyboard)
 
@@ -25,10 +42,7 @@
         return [subview isKindOfClass:NSClassFromString(@"UIKBKeyplaneView")];
     };
     
-    NSArray *possibleKeyboards = [keyboardWindow subviewsPassingTest:classCheck recursive:YES];
-    UIKBKeyplaneView *keyboardView = [possibleKeyboards lastObject];
-    
-    return keyboardView;
+    return [[keyboardWindow subviewsPassingTest:classCheck recursive:YES] lastObject];;
 }
 
 @end
