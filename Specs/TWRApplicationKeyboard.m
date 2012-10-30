@@ -13,7 +13,7 @@
 SpecBegin(TWRApplicationKeyboard)
 
 describe(@"-keyboardView", ^{
-    it(@"should return the keyboard view when displayed", ^{
+    it(@"should return the keyboard view when the keyboard is displayed", ^{
         UIViewController *viewController = [[UIViewController alloc] init];
         
         UITextField *textField = [[UITextField alloc] init];
@@ -24,7 +24,7 @@ describe(@"-keyboardView", ^{
         
         [textField becomeFirstResponder];
         
-        UIKBKeyplaneView *keyboardView = [[UIApplication sharedApplication] keyboardView];
+        UIKBKeyplaneView *keyboardView = [[UIApplication sharedApplication] keyplaneView];
         expect(keyboardView).toNot.beNil();
     });
     
@@ -37,7 +37,7 @@ describe(@"-keyboardView", ^{
         
         [[[UIApplication sharedApplication] keyWindow] setRootViewController:viewController];
         
-        UIKBKeyplaneView *keyboardView = [[UIApplication sharedApplication] keyboardView];
+        UIKBKeyplaneView *keyboardView = [[UIApplication sharedApplication] keyplaneView];
         expect(keyboardView).to.beNil();
     });
 });

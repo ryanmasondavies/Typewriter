@@ -11,6 +11,6 @@
 
 @interface UIApplication (TWRKeyboard)
 
-- (UIKBKeyplaneView *)keyboardView;
+- (UIKBKeyplaneView *)keyplaneView;
 
 @end

@@ -28,6 +28,8 @@
 		94A8A1F0163FE007003425BA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 949382F4163F117C0098768D /* CoreGraphics.framework */; };
 		94A8A1F5163FE480003425BA /* UIKBKeyplaneView.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A8A1F4163FE480003425BA /* UIKBKeyplaneView.m */; };
 		94A8A1F7163FE49A003425BA /* UIKBTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A8A1F6163FE49A003425BA /* UIKBTree.m */; };
+		94A8A1FD163FE765003425BA /* TWRTypist.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A8A1FB163FE765003425BA /* TWRTypist.m */; };
+		94A8A201163FE76B003425BA /* TWRTypistSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A8A1FF163FE76B003425BA /* TWRTypistSpec.m */; };
 		BB27B502D4684453BCBC9D98 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F27FF5F51C614060939C8A05 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -89,6 +91,9 @@
 		94A8A1F3163FE254003425BA /* UIKBTree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIKBTree.h; sourceTree = "<group>"; };
 		94A8A1F4163FE480003425BA /* UIKBKeyplaneView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIKBKeyplaneView.m; sourceTree = "<group>"; };
 		94A8A1F6163FE49A003425BA /* UIKBTree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIKBTree.m; sourceTree = "<group>"; };
+		94A8A1FA163FE765003425BA /* TWRTypist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWRTypist.h; sourceTree = "<group>"; };
+		94A8A1FB163FE765003425BA /* TWRTypist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWRTypist.m; sourceTree = "<group>"; };
+		94A8A1FF163FE76B003425BA /* TWRTypistSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWRTypistSpec.m; sourceTree = "<group>"; };
 		D9E2430E42114D2AADC68FDE /* libPods-Specs.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Specs.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F27FF5F51C614060939C8A05 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -170,6 +175,8 @@
 		949382BB163F10CB0098768D /* Typewriter */ = {
 			isa = PBXGroup;
 			children = (
+				94A8A1FA163FE765003425BA /* TWRTypist.h */,
+				94A8A1FB163FE765003425BA /* TWRTypist.m */,
 				94938327163F17440098768D /* UIApplication+TWRKeyboard.h */,
 				94938328163F17440098768D /* UIApplication+TWRKeyboard.m */,
 				94938329163F17440098768D /* UIView+TWRSearching.h */,
@@ -191,6 +198,7 @@
 		949382E5163F11010098768D /* Specs */ = {
 			isa = PBXGroup;
 			children = (
+				94A8A1FF163FE76B003425BA /* TWRTypistSpec.m */,
 				94938343163F21C70098768D /* TWRApplicationKeyboard.m */,
 				94938333163F180A0098768D /* TWRSpecHelper.h */,
 				949382EB163F11430098768D /* Supporting Files */,
@@ -399,6 +407,7 @@
 				9493832C163F17440098768D /* UIView+TWRSearching.m in Sources */,
 				94A8A1F5163FE480003425BA /* UIKBKeyplaneView.m in Sources */,
 				94A8A1F7163FE49A003425BA /* UIKBTree.m in Sources */,
+				94A8A1FD163FE765003425BA /* TWRTypist.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,6 +416,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				94938344163F21C70098768D /* TWRApplicationKeyboard.m in Sources */,
+				94A8A201163FE76B003425BA /* TWRTypistSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,6 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface UIKBTree : NSObject
-@property (readonly) NSArray *keys;
+
+@property (readonly) CGRect frame;
 @property (readonly) NSString *representedString;
+@property (readonly) NSArray *keys;
+@property (readonly) BOOL isShiftKeyplane;
+
 @end

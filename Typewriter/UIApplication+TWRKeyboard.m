@@ -11,7 +11,7 @@
 
 @implementation UIApplication (TWRKeyboard)
 
-- (UIKBKeyplaneView *)keyboardView
+- (UIKBKeyplaneView *)keyplaneView
 {
     __block UIWindow *keyboardWindow = nil;
     [[self windows] enumerateObjectsUsingBlock:^(UIWindow *window, NSUInteger idx, BOOL *stop) {
