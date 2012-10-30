@@ -1,6 +1,5 @@
 platform :ios, '6.0'
 
-pod 'Braille', '~> 0.0.3'
 pod 'Handsy', '~> 0.0.1'
 
 target 'Specs', exclusive: true do

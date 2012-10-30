@@ -1,18 +1,15 @@
 
 PODS:
-- Braille (0.0.3)
 - Expecta (0.2.0)
 - Handsy (0.0.1)
 - Specta (0.1.6)
 
 DEPENDENCIES:
-- Braille (~> 0.0.3)
 - Expecta (~> 0.2.0)
 - Handsy (~> 0.0.1)
 - Specta (~> 0.1.6)
 
 SPEC CHECKSUMS:
-  Braille: 8d2037f27a1cb2a293804e1f606acb3a5104f07d
   Handsy: b5f2575b50f4613f593a0407b3f8328e77e7f375
   Expecta: 1521da8c54c253277d5fae673f516c76ed838bc7
   Specta: ec7e1ce376442fc26b927dbc517c90e36232cde6
