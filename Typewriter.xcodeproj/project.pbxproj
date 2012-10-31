@@ -15,9 +15,6 @@
 		949382E9163F11010098768D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 949382E6163F11010098768D /* InfoPlist.strings */; };
 		949382F3163F117C0098768D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 949382B9163F10CB0098768D /* Foundation.framework */; };
 		949382F5163F117C0098768D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 949382F4163F117C0098768D /* CoreGraphics.framework */; };
-		949382FB163F117C0098768D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 949382F9163F117C0098768D /* InfoPlist.strings */; };
-		949382FD163F117D0098768D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 949382FC163F117D0098768D /* main.m */; };
-		94938301163F117D0098768D /* TWRAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 94938300163F117D0098768D /* TWRAppDelegate.m */; };
 		9493832B163F17440098768D /* UIApplication+TWRKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 94938328163F17440098768D /* UIApplication+TWRKeyboard.m */; };
 		9493839A163F24B90098768D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94938399163F24B90098768D /* UIKit.framework */; };
 		9493839B163F24C60098768D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94938399163F24B90098768D /* UIKit.framework */; };
@@ -29,6 +26,8 @@
 		94A8A21A163FFF62003425BA /* TWRTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A8A219163FFF62003425BA /* TWRTestViewController.m */; };
 		94A8A2241640210E003425BA /* TWRTypistSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A8A1FF163FE76B003425BA /* TWRTypistSpec.m */; };
 		94A8A2251640210E003425BA /* TWRApplicationKeyboardSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 94938343163F21C70098768D /* TWRApplicationKeyboardSpec.m */; };
+		94F14FF51641611E00ACA5E7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 94F14FF01641611E00ACA5E7 /* main.m */; };
+		94F14FF61641611E00ACA5E7 /* TWRAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 94F14FF21641611E00ACA5E7 /* TWRAppDelegate.m */; };
 		BB27B502D4684453BCBC9D98 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F27FF5F51C614060939C8A05 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -71,14 +70,8 @@
 		949382C8163F10CB0098768D /* SenTestingKit.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		949382E7163F11010098768D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		949382E8163F11010098768D /* Specs-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Specs-Info.plist"; sourceTree = "<group>"; };
-		949382F0163F117C0098768D /* TestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		949382F0163F117C0098768D /* App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		949382F4163F117C0098768D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		949382F8163F117C0098768D /* TestApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TestApp-Info.plist"; sourceTree = "<group>"; };
-		949382FA163F117C0098768D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		949382FC163F117D0098768D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		949382FE163F117D0098768D /* TestApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TestApp-Prefix.pch"; sourceTree = "<group>"; };
-		949382FF163F117D0098768D /* TWRAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TWRAppDelegate.h; sourceTree = "<group>"; };
-		94938300163F117D0098768D /* TWRAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TWRAppDelegate.m; sourceTree = "<group>"; };
 		94938327163F17440098768D /* UIApplication+TWRKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+TWRKeyboard.h"; sourceTree = "<group>"; };
 		94938328163F17440098768D /* UIApplication+TWRKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+TWRKeyboard.m"; sourceTree = "<group>"; };
 		94938333163F180A0098768D /* TWRSpecHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TWRSpecHelper.h; sourceTree = "<group>"; };
@@ -93,6 +86,11 @@
 		94A8A1FF163FE76B003425BA /* TWRTypistSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWRTypistSpec.m; sourceTree = "<group>"; };
 		94A8A218163FFF62003425BA /* TWRTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWRTestViewController.h; sourceTree = "<group>"; };
 		94A8A219163FFF62003425BA /* TWRTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWRTestViewController.m; sourceTree = "<group>"; };
+		94F14FEC1641611E00ACA5E7 /* App-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "App-Info.plist"; sourceTree = "<group>"; };
+		94F14FED1641611E00ACA5E7 /* App-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "App-Prefix.pch"; sourceTree = "<group>"; };
+		94F14FF01641611E00ACA5E7 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		94F14FF11641611E00ACA5E7 /* TWRAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWRAppDelegate.h; sourceTree = "<group>"; };
+		94F14FF21641611E00ACA5E7 /* TWRAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWRAppDelegate.m; sourceTree = "<group>"; };
 		D9E2430E42114D2AADC68FDE /* libPods-Specs.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Specs.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F27FF5F51C614060939C8A05 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -138,7 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				949382BB163F10CB0098768D /* Typewriter */,
-				949382F6163F117C0098768D /* TestApp */,
+				94F14FEB1641611E00ACA5E7 /* App */,
 				949382E5163F11010098768D /* Specs */,
 				949382B8163F10CB0098768D /* Frameworks */,
 				949382B7163F10CB0098768D /* Products */,
@@ -152,7 +150,7 @@
 			children = (
 				949382B6163F10CB0098768D /* libTypewriter.a */,
 				949382C7163F10CB0098768D /* Specs.octest */,
-				949382F0163F117C0098768D /* TestApp.app */,
+				949382F0163F117C0098768D /* App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -216,23 +214,22 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		949382F6163F117C0098768D /* TestApp */ = {
+		94F14FEB1641611E00ACA5E7 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				949382FF163F117D0098768D /* TWRAppDelegate.h */,
-				94938300163F117D0098768D /* TWRAppDelegate.m */,
-				949382F7163F117C0098768D /* Supporting Files */,
+				94F14FF11641611E00ACA5E7 /* TWRAppDelegate.h */,
+				94F14FF21641611E00ACA5E7 /* TWRAppDelegate.m */,
+				94F14FF71641612600ACA5E7 /* Supporting Files */,
 			);
-			path = TestApp;
+			path = App;
 			sourceTree = "<group>";
 		};
-		949382F7163F117C0098768D /* Supporting Files */ = {
+		94F14FF71641612600ACA5E7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				949382F8163F117C0098768D /* TestApp-Info.plist */,
-				949382F9163F117C0098768D /* InfoPlist.strings */,
-				949382FC163F117D0098768D /* main.m */,
-				949382FE163F117D0098768D /* TestApp-Prefix.pch */,
+				94F14FEC1641611E00ACA5E7 /* App-Info.plist */,
+				94F14FED1641611E00ACA5E7 /* App-Prefix.pch */,
+				94F14FF01641611E00ACA5E7 /* main.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -279,9 +276,9 @@
 			productReference = 949382C7163F10CB0098768D /* Specs.octest */;
 			productType = "com.apple.product-type.bundle";
 		};
-		949382EF163F117C0098768D /* TestApp */ = {
+		949382EF163F117C0098768D /* App */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 94938308163F117D0098768D /* Build configuration list for PBXNativeTarget "TestApp" */;
+			buildConfigurationList = 94938308163F117D0098768D /* Build configuration list for PBXNativeTarget "App" */;
 			buildPhases = (
 				949382EC163F117C0098768D /* Sources */,
 				949382ED163F117C0098768D /* Frameworks */,
@@ -291,9 +288,9 @@
 			);
 			dependencies = (
 			);
-			name = TestApp;
+			name = App;
 			productName = TestApp;
-			productReference = 949382F0163F117C0098768D /* TestApp.app */;
+			productReference = 949382F0163F117C0098768D /* App.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -319,7 +316,7 @@
 			projectRoot = "";
 			targets = (
 				949382B5163F10CA0098768D /* Typewriter */,
-				949382EF163F117C0098768D /* TestApp */,
+				949382EF163F117C0098768D /* App */,
 				949382C6163F10CB0098768D /* Specs */,
 			);
 		};
@@ -338,7 +335,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				949382FB163F117C0098768D /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,8 +410,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				949382FD163F117D0098768D /* main.m in Sources */,
-				94938301163F117D0098768D /* TWRAppDelegate.m in Sources */,
+				94F14FF51641611E00ACA5E7 /* main.m in Sources */,
+				94F14FF61641611E00ACA5E7 /* TWRAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -429,7 +425,7 @@
 		};
 		9493830C163F126D0098768D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 949382EF163F117C0098768D /* TestApp */;
+			target = 949382EF163F117C0098768D /* App */;
 			targetProxy = 9493830B163F126D0098768D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -439,14 +435,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				949382E7163F11010098768D /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		949382F9163F117C0098768D /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				949382FA163F117C0098768D /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -531,7 +519,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4A2A28075CFF4C1D996A3BD6 /* Pods-Specs.xcconfig */;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TestApp.app/TestApp";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/App.app/App";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Typewriter/Typewriter-Prefix.pch";
 				INFOPLIST_FILE = "Specs/Specs-Info.plist";
@@ -545,7 +533,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4A2A28075CFF4C1D996A3BD6 /* Pods-Specs.xcconfig */;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TestApp.app/TestApp";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/App.app/App";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Typewriter/Typewriter-Prefix.pch";
 				INFOPLIST_FILE = "Specs/Specs-Info.plist";
@@ -564,8 +552,8 @@
 					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "TestApp/TestApp-Prefix.pch";
-				INFOPLIST_FILE = "TestApp/TestApp-Info.plist";
+				GCC_PREFIX_HEADER = "App/App-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/App/App-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
@@ -581,8 +569,8 @@
 					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "TestApp/TestApp-Prefix.pch";
-				INFOPLIST_FILE = "TestApp/TestApp-Info.plist";
+				GCC_PREFIX_HEADER = "App/App-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/App/App-Info.plist";
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -620,7 +608,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		94938308163F117D0098768D /* Build configuration list for PBXNativeTarget "TestApp" */ = {
+		94938308163F117D0098768D /* Build configuration list for PBXNativeTarget "App" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				94938309163F117D0098768D /* Debug */,
