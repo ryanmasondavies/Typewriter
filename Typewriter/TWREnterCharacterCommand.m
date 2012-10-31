@@ -11,6 +11,16 @@
 
 @implementation TWREnterCharacterCommand
 
+- (id)initWithCharacter:(unichar)character
+{
+    self = [super init];
+    if (self) {
+        self.character = character;
+    }
+    
+    return self;
+}
+
 - (UIKBTree *)key
 {
     NSString *string = [NSString stringWithFormat:@"%C", [self character]];

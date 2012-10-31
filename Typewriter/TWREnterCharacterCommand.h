@@ -10,4 +10,5 @@
 
 @interface TWREnterCharacterCommand : TWRTypingCommand
 @property (nonatomic) unichar character;
+- (id)initWithCharacter:(unichar)character;
 @end

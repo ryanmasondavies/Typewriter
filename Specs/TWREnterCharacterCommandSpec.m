@@ -12,11 +12,9 @@
 SpecBegin(TWREnterCharacterCommand)
 
 __block TWRTestViewController *viewController;
-__block TWREnterCharacterCommand *enterCharacterCommand;
 
 before(^{
     viewController = [[TWRTestViewController alloc] init];
-    enterCharacterCommand = [[TWREnterCharacterCommand alloc] init];
     [[[UIApplication sharedApplication] keyWindow] setRootViewController:viewController];
 });
 
@@ -27,157 +25,157 @@ context(@"when the keyboard is displaying lowercase characters", ^{
     });
     
     it(@"should enter a lowercase A", ^{
-        [enterCharacterCommand setCharacter:'a'];
+        TWREnterCharacterCommand *enterCharacterCommand = [[TWREnterCharacterCommand alloc] initWithCharacter:'a'];
         [enterCharacterCommand execute];
         expect([[viewController textField] text]).to.equal(@"a");
     });
 
     it(@"should enter a lowercase B", ^{
-        [enterCharacterCommand setCharacter:'b'];
+        TWREnterCharacterCommand *enterCharacterCommand = [[TWREnterCharacterCommand alloc] initWithCharacter:'b'];
         [enterCharacterCommand execute];
         expect([[viewController textField] text]).to.equal(@"b");
     });
 
     it(@"should enter a lowercase C", ^{
-        [enterCharacterCommand setCharacter:'c'];
+        TWREnterCharacterCommand *enterCharacterCommand = [[TWREnterCharacterCommand alloc] initWithCharacter:'c'];
         [enterCharacterCommand execute];
         expect([[viewController textField] text]).to.equal(@"c");
     });
 
     it(@"should enter a lowercase D", ^{
-        [enterCharacterCommand setCharacter:'d'];
+        TWREnterCharacterCommand *enterCharacterCommand = [[TWREnterCharacterCommand alloc] initWithCharacter:'d'];
         [enterCharacterCommand execute];
         expect([[viewController textField] text]).to.equal(@"d");
     });
 
     it(@"should enter a lowercase E", ^{
-        [enterCharacterCommand setCharacter:'e'];
+        TWREnterCharacterCommand *enterCharacterCommand = [[TWREnterCharacterCommand alloc] initWithCharacter:'e'];
         [enterCharacterCommand execute];
         expect([[viewController textField] text]).to.equal(@"e");
     });
 
     it(@"should enter a lowercase F", ^{
-        [enterCharacterCommand setCharacter:'f'];
+        TWREnterCharacterCommand *enterCharacterCommand = [[TWREnterCharacterCommand alloc] initWithCharacter:'f'];
         [enterCharacterCommand execute];
         expect([[viewController textField] text]).to.equal(@"f");
     });
 
     it(@"should enter a lowercase G", ^{
-        [enterCharacterCommand setCharacter:'g'];
+        TWREnterCharacterCommand *enterCharacterCommand = [[TWREnterCharacterCommand alloc] initWithCharacter:'g'];
         [enterCharacterCommand execute];
         expect([[viewController textField] text]).to.equal(@"g");
     });
 
     it(@"should enter a lowercase H", ^{
-        [enterCharacterCommand setCharacter:'h'];
+        TWREnterCharacterCommand *enterCharacterCommand = [[TWREnterCharacterCommand alloc] initWithCharacter:'h'];
         [enterCharacterCommand execute];
         expect([[viewController textField] text]).to.equal(@"h");
     });
 
     it(@"should enter a lowercase I", ^{
-        [enterCharacterCommand setCharacter:'i'];
+        TWREnterCharacterCommand *enterCharacterCommand = [[TWREnterCharacterCommand alloc] initWithCharacter:'i'];
         [enterCharacterCommand execute];
         expect([[viewController textField] text]).to.equal(@"i");
     });
 
     it(@"should enter a lowercase J", ^{
-        [enterCharacterCommand setCharacter:'j'];
+        TWREnterCharacterCommand *enterCharacterCommand = [[TWREnterCharacterCommand alloc] initWithCharacter:'j'];
         [enterCharacterCommand execute];
         expect([[viewController textField] text]).to.equal(@"j");
     });
 
     it(@"should enter a lowercase K", ^{
-        [enterCharacterCommand setCharacter:'k'];
+        TWREnterCharacterCommand *enterCharacterCommand = [[TWREnterCharacterCommand alloc] initWithCharacter:'k'];
         [enterCharacterCommand execute];
         expect([[viewController textField] text]).to.equal(@"k");
     });
 
     it(@"should enter a lowercase L", ^{
-        [enterCharacterCommand setCharacter:'l'];
+        TWREnterCharacterCommand *enterCharacterCommand = [[TWREnterCharacterCommand alloc] initWithCharacter:'l'];
         [enterCharacterCommand execute];
         expect([[viewController textField] text]).to.equal(@"l");
     });
 
     it(@"should enter a lowercase M", ^{
-        [enterCharacterCommand setCharacter:'m'];
+        TWREnterCharacterCommand *enterCharacterCommand = [[TWREnterCharacterCommand alloc] initWithCharacter:'m'];
         [enterCharacterCommand execute];
         expect([[viewController textField] text]).to.equal(@"m");
     });
 
     it(@"should enter a lowercase N", ^{
-        [enterCharacterCommand setCharacter:'n'];
+        TWREnterCharacterCommand *enterCharacterCommand = [[TWREnterCharacterCommand alloc] initWithCharacter:'n'];
         [enterCharacterCommand execute];
         expect([[viewController textField] text]).to.equal(@"n");
     });
 
     it(@"should enter a lowercase O", ^{
-        [enterCharacterCommand setCharacter:'o'];
+        TWREnterCharacterCommand *enterCharacterCommand = [[TWREnterCharacterCommand alloc] initWithCharacter:'o'];
         [enterCharacterCommand execute];
         expect([[viewController textField] text]).to.equal(@"o");
     });
 
     it(@"should enter a lowercase P", ^{
-        [enterCharacterCommand setCharacter:'p'];
+        TWREnterCharacterCommand *enterCharacterCommand = [[TWREnterCharacterCommand alloc] initWithCharacter:'p'];
         [enterCharacterCommand execute];
         expect([[viewController textField] text]).to.equal(@"p");
     });
 
     it(@"should enter a lowercase Q", ^{
-        [enterCharacterCommand setCharacter:'q'];
+        TWREnterCharacterCommand *enterCharacterCommand = [[TWREnterCharacterCommand alloc] initWithCharacter:'q'];
         [enterCharacterCommand execute];
         expect([[viewController textField] text]).to.equal(@"q");
     });
 
     it(@"should enter a lowercase R", ^{
-        [enterCharacterCommand setCharacter:'r'];
+        TWREnterCharacterCommand *enterCharacterCommand = [[TWREnterCharacterCommand alloc] initWithCharacter:'r'];
         [enterCharacterCommand execute];
         expect([[viewController textField] text]).to.equal(@"r");
     });
 
     it(@"should enter a lowercase S", ^{
-        [enterCharacterCommand setCharacter:'s'];
+        TWREnterCharacterCommand *enterCharacterCommand = [[TWREnterCharacterCommand alloc] initWithCharacter:'s'];
         [enterCharacterCommand execute];
         expect([[viewController textField] text]).to.equal(@"s");
     });
 
     it(@"should enter a lowercase T", ^{
-        [enterCharacterCommand setCharacter:'t'];
+        TWREnterCharacterCommand *enterCharacterCommand = [[TWREnterCharacterCommand alloc] initWithCharacter:'t'];
         [enterCharacterCommand execute];
         expect([[viewController textField] text]).to.equal(@"t");
     });
 
     it(@"should enter a lowercase U", ^{
-        [enterCharacterCommand setCharacter:'u'];
+        TWREnterCharacterCommand *enterCharacterCommand = [[TWREnterCharacterCommand alloc] initWithCharacter:'u'];
         [enterCharacterCommand execute];
         expect([[viewController textField] text]).to.equal(@"u");
     });
 
     it(@"should enter a lowercase V", ^{
-        [enterCharacterCommand setCharacter:'v'];
+        TWREnterCharacterCommand *enterCharacterCommand = [[TWREnterCharacterCommand alloc] initWithCharacter:'v'];
         [enterCharacterCommand execute];
         expect([[viewController textField] text]).to.equal(@"v");
     });
 
     it(@"should enter a lowercase W", ^{
-        [enterCharacterCommand setCharacter:'w'];
+        TWREnterCharacterCommand *enterCharacterCommand = [[TWREnterCharacterCommand alloc] initWithCharacter:'w'];
         [enterCharacterCommand execute];
         expect([[viewController textField] text]).to.equal(@"w");
     });
 
     it(@"should enter a lowercase X", ^{
-        [enterCharacterCommand setCharacter:'x'];
+        TWREnterCharacterCommand *enterCharacterCommand = [[TWREnterCharacterCommand alloc] initWithCharacter:'x'];
         [enterCharacterCommand execute];
         expect([[viewController textField] text]).to.equal(@"x");
     });
 
     it(@"should enter a lowercase Y", ^{
-        [enterCharacterCommand setCharacter:'y'];
+        TWREnterCharacterCommand *enterCharacterCommand = [[TWREnterCharacterCommand alloc] initWithCharacter:'y'];
         [enterCharacterCommand execute];
         expect([[viewController textField] text]).to.equal(@"y");
     });
 
     it(@"should enter a lowercase Z", ^{
-        [enterCharacterCommand setCharacter:'z'];
+        TWREnterCharacterCommand *enterCharacterCommand = [[TWREnterCharacterCommand alloc] initWithCharacter:'z'];
         [enterCharacterCommand execute];
         expect([[viewController textField] text]).to.equal(@"z");
     });
@@ -190,157 +188,157 @@ context(@"when the keyboard is displaying uppercase characters", ^{
     });
     
     it(@"should enter an uppercase A", ^{
-        [enterCharacterCommand setCharacter:'A'];
+        TWREnterCharacterCommand *enterCharacterCommand = [[TWREnterCharacterCommand alloc] initWithCharacter:'A'];
         [enterCharacterCommand execute];
         expect([[viewController textField] text]).to.equal(@"A");
     });
     
     it(@"should enter an uppercase B", ^{
-        [enterCharacterCommand setCharacter:'B'];
+        TWREnterCharacterCommand *enterCharacterCommand = [[TWREnterCharacterCommand alloc] initWithCharacter:'B'];
         [enterCharacterCommand execute];
         expect([[viewController textField] text]).to.equal(@"B");
     });
     
     it(@"should enter an uppercase C", ^{
-        [enterCharacterCommand setCharacter:'C'];
+        TWREnterCharacterCommand *enterCharacterCommand = [[TWREnterCharacterCommand alloc] initWithCharacter:'C'];
         [enterCharacterCommand execute];
         expect([[viewController textField] text]).to.equal(@"C");
     });
     
     it(@"should enter an uppercase D", ^{
-        [enterCharacterCommand setCharacter:'D'];
+        TWREnterCharacterCommand *enterCharacterCommand = [[TWREnterCharacterCommand alloc] initWithCharacter:'D'];
         [enterCharacterCommand execute];
         expect([[viewController textField] text]).to.equal(@"D");
     });
     
     it(@"should enter an uppercase E", ^{
-        [enterCharacterCommand setCharacter:'E'];
+        TWREnterCharacterCommand *enterCharacterCommand = [[TWREnterCharacterCommand alloc] initWithCharacter:'E'];
         [enterCharacterCommand execute];
         expect([[viewController textField] text]).to.equal(@"E");
     });
     
     it(@"should enter an uppercase F", ^{
-        [enterCharacterCommand setCharacter:'F'];
+        TWREnterCharacterCommand *enterCharacterCommand = [[TWREnterCharacterCommand alloc] initWithCharacter:'F'];
         [enterCharacterCommand execute];
         expect([[viewController textField] text]).to.equal(@"F");
     });
     
     it(@"should enter an uppercase G", ^{
-        [enterCharacterCommand setCharacter:'G'];
+        TWREnterCharacterCommand *enterCharacterCommand = [[TWREnterCharacterCommand alloc] initWithCharacter:'G'];
         [enterCharacterCommand execute];
         expect([[viewController textField] text]).to.equal(@"G");
     });
     
     it(@"should enter an uppercase H", ^{
-        [enterCharacterCommand setCharacter:'H'];
+        TWREnterCharacterCommand *enterCharacterCommand = [[TWREnterCharacterCommand alloc] initWithCharacter:'H'];
         [enterCharacterCommand execute];
         expect([[viewController textField] text]).to.equal(@"H");
     });
     
     it(@"should enter an uppercase I", ^{
-        [enterCharacterCommand setCharacter:'I'];
+        TWREnterCharacterCommand *enterCharacterCommand = [[TWREnterCharacterCommand alloc] initWithCharacter:'I'];
         [enterCharacterCommand execute];
         expect([[viewController textField] text]).to.equal(@"I");
     });
     
     it(@"should enter an uppercase J", ^{
-        [enterCharacterCommand setCharacter:'J'];
+        TWREnterCharacterCommand *enterCharacterCommand = [[TWREnterCharacterCommand alloc] initWithCharacter:'J'];
         [enterCharacterCommand execute];
         expect([[viewController textField] text]).to.equal(@"J");
     });
     
     it(@"should enter an uppercase K", ^{
-        [enterCharacterCommand setCharacter:'K'];
+        TWREnterCharacterCommand *enterCharacterCommand = [[TWREnterCharacterCommand alloc] initWithCharacter:'K'];
         [enterCharacterCommand execute];
         expect([[viewController textField] text]).to.equal(@"K");
     });
     
     it(@"should enter an uppercase L", ^{
-        [enterCharacterCommand setCharacter:'L'];
+        TWREnterCharacterCommand *enterCharacterCommand = [[TWREnterCharacterCommand alloc] initWithCharacter:'L'];
         [enterCharacterCommand execute];
         expect([[viewController textField] text]).to.equal(@"L");
     });
     
     it(@"should enter an uppercase M", ^{
-        [enterCharacterCommand setCharacter:'M'];
+        TWREnterCharacterCommand *enterCharacterCommand = [[TWREnterCharacterCommand alloc] initWithCharacter:'M'];
         [enterCharacterCommand execute];
         expect([[viewController textField] text]).to.equal(@"M");
     });
     
     it(@"should enter an uppercase N", ^{
-        [enterCharacterCommand setCharacter:'N'];
+        TWREnterCharacterCommand *enterCharacterCommand = [[TWREnterCharacterCommand alloc] initWithCharacter:'N'];
         [enterCharacterCommand execute];
         expect([[viewController textField] text]).to.equal(@"N");
     });
     
     it(@"should enter an uppercase O", ^{
-        [enterCharacterCommand setCharacter:'O'];
+        TWREnterCharacterCommand *enterCharacterCommand = [[TWREnterCharacterCommand alloc] initWithCharacter:'O'];
         [enterCharacterCommand execute];
         expect([[viewController textField] text]).to.equal(@"O");
     });
     
     it(@"should enter an uppercase P", ^{
-        [enterCharacterCommand setCharacter:'P'];
+        TWREnterCharacterCommand *enterCharacterCommand = [[TWREnterCharacterCommand alloc] initWithCharacter:'P'];
         [enterCharacterCommand execute];
         expect([[viewController textField] text]).to.equal(@"P");
     });
     
     it(@"should enter an uppercase Q", ^{
-        [enterCharacterCommand setCharacter:'Q'];
+        TWREnterCharacterCommand *enterCharacterCommand = [[TWREnterCharacterCommand alloc] initWithCharacter:'Q'];
         [enterCharacterCommand execute];
         expect([[viewController textField] text]).to.equal(@"Q");
     });
     
     it(@"should enter an uppercase R", ^{
-        [enterCharacterCommand setCharacter:'R'];
+        TWREnterCharacterCommand *enterCharacterCommand = [[TWREnterCharacterCommand alloc] initWithCharacter:'R'];
         [enterCharacterCommand execute];
         expect([[viewController textField] text]).to.equal(@"R");
     });
     
     it(@"should enter an uppercase S", ^{
-        [enterCharacterCommand setCharacter:'S'];
+        TWREnterCharacterCommand *enterCharacterCommand = [[TWREnterCharacterCommand alloc] initWithCharacter:'S'];
         [enterCharacterCommand execute];
         expect([[viewController textField] text]).to.equal(@"S");
     });
     
     it(@"should enter an uppercase T", ^{
-        [enterCharacterCommand setCharacter:'T'];
+        TWREnterCharacterCommand *enterCharacterCommand = [[TWREnterCharacterCommand alloc] initWithCharacter:'T'];
         [enterCharacterCommand execute];
         expect([[viewController textField] text]).to.equal(@"T");
     });
     
     it(@"should enter an uppercase U", ^{
-        [enterCharacterCommand setCharacter:'U'];
+        TWREnterCharacterCommand *enterCharacterCommand = [[TWREnterCharacterCommand alloc] initWithCharacter:'U'];
         [enterCharacterCommand execute];
         expect([[viewController textField] text]).to.equal(@"U");
     });
     
     it(@"should enter an uppercase V", ^{
-        [enterCharacterCommand setCharacter:'V'];
+        TWREnterCharacterCommand *enterCharacterCommand = [[TWREnterCharacterCommand alloc] initWithCharacter:'V'];
         [enterCharacterCommand execute];
         expect([[viewController textField] text]).to.equal(@"V");
     });
     
     it(@"should enter an uppercase W", ^{
-        [enterCharacterCommand setCharacter:'W'];
+        TWREnterCharacterCommand *enterCharacterCommand = [[TWREnterCharacterCommand alloc] initWithCharacter:'W'];
         [enterCharacterCommand execute];
         expect([[viewController textField] text]).to.equal(@"W");
     });
     
     it(@"should enter an uppercase X", ^{
-        [enterCharacterCommand setCharacter:'X'];
+        TWREnterCharacterCommand *enterCharacterCommand = [[TWREnterCharacterCommand alloc] initWithCharacter:'X'];
         [enterCharacterCommand execute];
         expect([[viewController textField] text]).to.equal(@"X");
     });
     
     it(@"should enter an uppercase Y", ^{
-        [enterCharacterCommand setCharacter:'Y'];
+        TWREnterCharacterCommand *enterCharacterCommand = [[TWREnterCharacterCommand alloc] initWithCharacter:'Y'];
         [enterCharacterCommand execute];
         expect([[viewController textField] text]).to.equal(@"Y");
     });
     
     it(@"should enter an uppercase Z", ^{
-        [enterCharacterCommand setCharacter:'Z'];
+        TWREnterCharacterCommand *enterCharacterCommand = [[TWREnterCharacterCommand alloc] initWithCharacter:'Z'];
         [enterCharacterCommand execute];
         expect([[viewController textField] text]).to.equal(@"Z");
     });
