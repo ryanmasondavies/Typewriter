@@ -10,6 +10,14 @@
 #import "UIApplication+TWRKeyboard.h"
 #import <Handsy/UIView+HDYGestures.h>
 
+@interface TWRTypist ()
+
++ (BOOL)pressKeyForRepresentedString:(NSString *)representedString;
++ (BOOL)pressKeyForCharacter:(unichar)character;
++ (BOOL)typeCharacter:(unichar)character;
+
+@end
+
 @implementation TWRTypist
 
 + (BOOL)pressKeyForRepresentedString:(NSString *)representedString
@@ -42,7 +50,7 @@
     return [self pressKeyForRepresentedString:[NSString stringWithFormat:@"%C", character]];
 }
 
-+ (BOOL)enterCharacter:(unichar)character
++ (BOOL)typeCharacter:(unichar)character
 {
     if ([self pressKeyForCharacter:character]) return YES;
     if ([self pressKeyForRepresentedString:@"Shift"] == NO) return NO;
@@ -54,10 +62,10 @@
     return NO;
 }
 
-+ (BOOL)enterString:(NSString *)string
++ (BOOL)typeString:(NSString *)string
 {
     for (NSUInteger index = 0; index < [string length]; index ++) {
-        if ([self enterCharacter:[string characterAtIndex:index]] == NO) {
+        if ([self typeCharacter:[string characterAtIndex:index]] == NO) {
             return NO;
         }
     }

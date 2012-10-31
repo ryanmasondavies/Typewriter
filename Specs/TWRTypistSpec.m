@@ -47,7 +47,7 @@ context(@"using the ASCII keyboard type", ^{
     });
     
     it(@"should enter space characters", ^{
-        BOOL result = [TWRTypist enterString:@" "];
+        BOOL result = [TWRTypist typeString:@" "];
         expect(result).to.beTruthy();
         expect([[viewController textField] text]).to.equal(@" ");
     });
@@ -58,101 +58,101 @@ context(@"using the ASCII keyboard type", ^{
         });
         
         it(@"should enter lowercase characters", ^{
-            BOOL result = [TWRTypist enterString:kLowercaseCharacters];
+            BOOL result = [TWRTypist typeString:kLowercaseCharacters];
             expect(result).to.beTruthy();
             expect([[viewController textField] text]).to.equal(kLowercaseCharacters);
         });
         
         it(@"should enter uppercase characters", ^{
-            BOOL result = [TWRTypist enterString:kUppercaseCharacters];
+            BOOL result = [TWRTypist typeString:kUppercaseCharacters];
             expect(result).to.beTruthy();
             expect([[viewController textField] text]).to.equal(kUppercaseCharacters);
         });
         
         it(@"should enter number characters", ^{
-            BOOL result = [TWRTypist enterString:kNumericalCharacters];
+            BOOL result = [TWRTypist typeString:kNumericalCharacters];
             expect(result).to.beTruthy();
             expect([[viewController textField] text]).to.equal(kNumericalCharacters);
         });
         
         it(@"should enter punctuation characters", ^{
-            BOOL result = [TWRTypist enterString:kPunctuationCharacters];
+            BOOL result = [TWRTypist typeString:kPunctuationCharacters];
             expect(result).to.beTruthy();
             expect([[viewController textField] text]).to.equal(kPunctuationCharacters);
         });
         
         it(@"should enter special characters", ^{
-            BOOL result = [TWRTypist enterString:kSpecialCharacters];
+            BOOL result = [TWRTypist typeString:kSpecialCharacters];
             expect(result).to.beTruthy();
             expect([[viewController textField] text]).to.equal(kSpecialCharacters);
         });
         
         it(@"should enter combinations of lowercase and uppercase characters", ^{
             NSString *string = stringByMergingStrings(@[kLowercaseCharacters, kUppercaseCharacters]);
-            BOOL result = [TWRTypist enterString:string];
+            BOOL result = [TWRTypist typeString:string];
             expect(result).to.beTruthy();
             expect([[viewController textField] text]).to.equal(string);
         });
         
         it(@"should enter combinations of lowercase and numerical characters", ^{
             NSString *string = stringByMergingStrings(@[kLowercaseCharacters, kNumericalCharacters]);
-            BOOL result = [TWRTypist enterString:string];
+            BOOL result = [TWRTypist typeString:string];
             expect(result).to.beTruthy();
             expect([[viewController textField] text]).to.equal(string);
         });
         
         it(@"should enter combinations of lowercase and punctuation characters", ^{
             NSString *string = stringByMergingStrings(@[kLowercaseCharacters, kPunctuationCharacters]);
-            BOOL result = [TWRTypist enterString:string];
+            BOOL result = [TWRTypist typeString:string];
             expect(result).to.beTruthy();
             expect([[viewController textField] text]).to.equal(string);
         });
         
         it(@"should enter combinations of lowercase and special characters", ^{
             NSString *string = stringByMergingStrings(@[kLowercaseCharacters, kSpecialCharacters]);
-            BOOL result = [TWRTypist enterString:string];
+            BOOL result = [TWRTypist typeString:string];
             expect(result).to.beTruthy();
             expect([[viewController textField] text]).to.equal(string);
         });
         
         it(@"should enter combinations of uppercase and numerical characters", ^{
             NSString *string = stringByMergingStrings(@[kUppercaseCharacters, kNumericalCharacters]);
-            BOOL result = [TWRTypist enterString:string];
+            BOOL result = [TWRTypist typeString:string];
             expect(result).to.beTruthy();
             expect([[viewController textField] text]).to.equal(string);
         });
         
         it(@"should enter combinations of uppercase and punctuation characters", ^{
             NSString *string = stringByMergingStrings(@[kUppercaseCharacters, kPunctuationCharacters]);
-            BOOL result = [TWRTypist enterString:string];
+            BOOL result = [TWRTypist typeString:string];
             expect(result).to.beTruthy();
             expect([[viewController textField] text]).to.equal(string);
         });
         
         it(@"should enter combinations of uppercase and special characters", ^{
             NSString *string = stringByMergingStrings(@[kUppercaseCharacters, kSpecialCharacters]);
-            BOOL result = [TWRTypist enterString:string];
+            BOOL result = [TWRTypist typeString:string];
             expect(result).to.beTruthy();
             expect([[viewController textField] text]).to.equal(string);
         });
         
         it(@"should enter combinations of numerical and punctuation characters", ^{
             NSString *string = stringByMergingStrings(@[kNumericalCharacters, kPunctuationCharacters]);
-            BOOL result = [TWRTypist enterString:string];
+            BOOL result = [TWRTypist typeString:string];
             expect(result).to.beTruthy();
             expect([[viewController textField] text]).to.equal(string);
         });
         
         it(@"should enter combinations of numerical and special characters", ^{
             NSString *string = stringByMergingStrings(@[kNumericalCharacters, kSpecialCharacters]);
-            BOOL result = [TWRTypist enterString:string];
+            BOOL result = [TWRTypist typeString:string];
             expect(result).to.beTruthy();
             expect([[viewController textField] text]).to.equal(string);
         });
         
         it(@"should enter combinations of punctuation and special characters", ^{
             NSString *string = stringByMergingStrings(@[kPunctuationCharacters, kSpecialCharacters]);
-            BOOL result = [TWRTypist enterString:string];
+            BOOL result = [TWRTypist typeString:string];
             expect(result).to.beTruthy();
             expect([[viewController textField] text]).to.equal(string);
         });
@@ -164,101 +164,101 @@ context(@"using the ASCII keyboard type", ^{
         });
         
         it(@"should enter lowercase characters", ^{
-            BOOL result = [TWRTypist enterString:kLowercaseCharacters];
+            BOOL result = [TWRTypist typeString:kLowercaseCharacters];
             expect(result).to.beTruthy();
             expect([[viewController textField] text]).to.equal(kLowercaseCharacters);
         });
         
         it(@"should enter uppercase characters", ^{
-            BOOL result = [TWRTypist enterString:kUppercaseCharacters];
+            BOOL result = [TWRTypist typeString:kUppercaseCharacters];
             expect(result).to.beTruthy();
             expect([[viewController textField] text]).to.equal(kUppercaseCharacters);
         });
         
         it(@"should enter number characters", ^{
-            BOOL result = [TWRTypist enterString:kNumericalCharacters];
+            BOOL result = [TWRTypist typeString:kNumericalCharacters];
             expect(result).to.beTruthy();
             expect([[viewController textField] text]).to.equal(kNumericalCharacters);
         });
         
         it(@"should enter punctuation characters", ^{
-            BOOL result = [TWRTypist enterString:kPunctuationCharacters];
+            BOOL result = [TWRTypist typeString:kPunctuationCharacters];
             expect(result).to.beTruthy();
             expect([[viewController textField] text]).to.equal(kPunctuationCharacters);
         });
         
         it(@"should enter special characters", ^{
-            BOOL result = [TWRTypist enterString:kSpecialCharacters];
+            BOOL result = [TWRTypist typeString:kSpecialCharacters];
             expect(result).to.beTruthy();
             expect([[viewController textField] text]).to.equal(kSpecialCharacters);
         });
         
         it(@"should enter combinations of lowercase and uppercase characters", ^{
             NSString *string = stringByMergingStrings(@[kLowercaseCharacters, kUppercaseCharacters]);
-            BOOL result = [TWRTypist enterString:string];
+            BOOL result = [TWRTypist typeString:string];
             expect(result).to.beTruthy();
             expect([[viewController textField] text]).to.equal(string);
         });
         
         it(@"should enter combinations of lowercase and numerical characters", ^{
             NSString *string = stringByMergingStrings(@[kLowercaseCharacters, kNumericalCharacters]);
-            BOOL result = [TWRTypist enterString:string];
+            BOOL result = [TWRTypist typeString:string];
             expect(result).to.beTruthy();
             expect([[viewController textField] text]).to.equal(string);
         });
         
         it(@"should enter combinations of lowercase and punctuation characters", ^{
             NSString *string = stringByMergingStrings(@[kLowercaseCharacters, kPunctuationCharacters]);
-            BOOL result = [TWRTypist enterString:string];
+            BOOL result = [TWRTypist typeString:string];
             expect(result).to.beTruthy();
             expect([[viewController textField] text]).to.equal(string);
         });
         
         it(@"should enter combinations of lowercase and special characters", ^{
             NSString *string = stringByMergingStrings(@[kLowercaseCharacters, kSpecialCharacters]);
-            BOOL result = [TWRTypist enterString:string];
+            BOOL result = [TWRTypist typeString:string];
             expect(result).to.beTruthy();
             expect([[viewController textField] text]).to.equal(string);
         });
         
         it(@"should enter combinations of uppercase and numerical characters", ^{
             NSString *string = stringByMergingStrings(@[kUppercaseCharacters, kNumericalCharacters]);
-            BOOL result = [TWRTypist enterString:string];
+            BOOL result = [TWRTypist typeString:string];
             expect(result).to.beTruthy();
             expect([[viewController textField] text]).to.equal(string);
         });
         
         it(@"should enter combinations of uppercase and punctuation characters", ^{
             NSString *string = stringByMergingStrings(@[kUppercaseCharacters, kPunctuationCharacters]);
-            BOOL result = [TWRTypist enterString:string];
+            BOOL result = [TWRTypist typeString:string];
             expect(result).to.beTruthy();
             expect([[viewController textField] text]).to.equal(string);
         });
         
         it(@"should enter combinations of uppercase and special characters", ^{
             NSString *string = stringByMergingStrings(@[kUppercaseCharacters, kSpecialCharacters]);
-            BOOL result = [TWRTypist enterString:string];
+            BOOL result = [TWRTypist typeString:string];
             expect(result).to.beTruthy();
             expect([[viewController textField] text]).to.equal(string);
         });
         
         it(@"should enter combinations of numerical and punctuation characters", ^{
             NSString *string = stringByMergingStrings(@[kNumericalCharacters, kPunctuationCharacters]);
-            BOOL result = [TWRTypist enterString:string];
+            BOOL result = [TWRTypist typeString:string];
             expect(result).to.beTruthy();
             expect([[viewController textField] text]).to.equal(string);
         });
         
         it(@"should enter combinations of numerical and special characters", ^{
             NSString *string = stringByMergingStrings(@[kNumericalCharacters, kSpecialCharacters]);
-            BOOL result = [TWRTypist enterString:string];
+            BOOL result = [TWRTypist typeString:string];
             expect(result).to.beTruthy();
             expect([[viewController textField] text]).to.equal(string);
         });
         
         it(@"should enter combinations of punctuation and special characters", ^{
             NSString *string = stringByMergingStrings(@[kPunctuationCharacters, kSpecialCharacters]);
-            BOOL result = [TWRTypist enterString:string];
+            BOOL result = [TWRTypist typeString:string];
             expect(result).to.beTruthy();
             expect([[viewController textField] text]).to.equal(string);
         });

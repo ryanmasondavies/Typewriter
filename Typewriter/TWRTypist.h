@@ -10,6 +10,6 @@
 
 @interface TWRTypist : NSObject
 
-+ (BOOL)enterString:(NSString *)string;
++ (BOOL)typeString:(NSString *)string;
 
 @end
