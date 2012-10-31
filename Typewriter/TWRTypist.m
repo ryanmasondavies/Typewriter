@@ -7,9 +7,6 @@
 //
 
 #import "TWRTypist.h"
-#import "TWREnterCharacterCommand.h"
-#import "TWRPressShiftCommand.h"
-
 #import "UIApplication+TWRKeyboard.h"
 #import <Handsy/UIView+HDYGestures.h>
 
@@ -28,8 +25,7 @@
         }
     }];
     
-    if (key == nil)
-        return NO;
+    if (key == nil) return NO;
     
     CGPoint keyCenter;
     keyCenter.x = key.frame.origin.x + (key.frame.size.width / 2);
@@ -46,21 +42,27 @@
     return [self pressKeyForRepresentedString:[NSString stringWithFormat:@"%C", character]];
 }
 
-- (void)enterCharacter:(unichar)character
+- (BOOL)enterCharacter:(unichar)character
 {
-    if ([[NSCharacterSet uppercaseLetterCharacterSet] characterIsMember:character])
-        [self pressKeyForRepresentedString:@"Shift"];
-    
-    if ([self pressKeyForCharacter:character] == NO) {
-        [self pressKeyForRepresentedString:@"More"];
-        [self pressKeyForCharacter:character];
-    }
+    if ([self pressKeyForCharacter:character]) return YES;
+    if ([self pressKeyForRepresentedString:@"Shift"] == NO) return NO;
+    if ([self pressKeyForCharacter:character]) return YES;
+    if ([self pressKeyForRepresentedString:@"More"] == NO) return NO;
+    if ([self pressKeyForCharacter:character]) return YES;
+    if ([self pressKeyForRepresentedString:@"Shift"] == NO) return NO;
+    if ([self pressKeyForCharacter:character]) return YES;
+    return NO;
 }
 
-- (void)enterString:(NSString *)string
+- (BOOL)enterString:(NSString *)string
 {
-    for (NSUInteger index = 0; index < [string length]; index ++)
-        [self enterCharacter:[string characterAtIndex:index]];
+    for (NSUInteger index = 0; index < [string length]; index ++) {
+        if ([self enterCharacter:[string characterAtIndex:index]] == NO) {
+            return NO;
+        }
+    }
+    
+    return YES;
 }
 
 @end
