@@ -10,24 +10,57 @@
 #import "TWREnterCharacterCommand.h"
 #import "TWRPressShiftCommand.h"
 
+#import "UIApplication+TWRKeyboard.h"
+#import <Handsy/UIView+HDYGestures.h>
+
 @implementation TWRTypist
 
-- (void)executeCommand:(TWRTypingCommand *)command
+- (BOOL)pressKeyForRepresentedString:(NSString *)representedString
 {
-    [command execute];
+    UIKBKeyplaneView *keyplaneView = [[UIApplication sharedApplication] keyplaneView];
+    NSArray *keys = [[keyplaneView keyplane] keys];
+    
+    __block UIKBTree *key;
+    [keys enumerateObjectsUsingBlock:^(UIKBTree *node, NSUInteger idx, BOOL *stop) {
+        if ([[node representedString] isEqualToString:representedString]) {
+            key = node;
+            *stop = YES;
+        }
+    }];
+    
+    if (key == nil)
+        return NO;
+    
+    CGPoint keyCenter;
+    keyCenter.x = key.frame.origin.x + (key.frame.size.width / 2);
+    keyCenter.y = key.frame.origin.y + (key.frame.size.height / 2);
+    [[[UIApplication sharedApplication] keyplaneView] tapAtPosition:keyCenter];
+    
     CFRunLoopRunInMode(kCFRunLoopDefaultMode, 0.2f, NO);
+    
+    return YES;
+}
+
+- (BOOL)pressKeyForCharacter:(unichar)character
+{
+    return [self pressKeyForRepresentedString:[NSString stringWithFormat:@"%C", character]];
+}
+
+- (void)enterCharacter:(unichar)character
+{
+    if ([[NSCharacterSet uppercaseLetterCharacterSet] characterIsMember:character])
+        [self pressKeyForRepresentedString:@"Shift"];
+    
+    if ([self pressKeyForCharacter:character] == NO) {
+        [self pressKeyForRepresentedString:@"More"];
+        [self pressKeyForCharacter:character];
+    }
 }
 
 - (void)enterString:(NSString *)string
 {
-    for (NSUInteger index = 0; index < [string length]; index ++) {
-        unichar character = [string characterAtIndex:index];
-        
-        if ([[NSCharacterSet uppercaseLetterCharacterSet] characterIsMember:character])
-            [self executeCommand:[TWRPressShiftCommand new]];
-        
-        [self executeCommand:[[TWREnterCharacterCommand alloc] initWithCharacter:character]];
-    }
+    for (NSUInteger index = 0; index < [string length]; index ++)
+        [self enterCharacter:[string characterAtIndex:index]];
 }
 
 @end
