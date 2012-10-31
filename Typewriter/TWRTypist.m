@@ -12,7 +12,7 @@
 
 @implementation TWRTypist
 
-- (BOOL)pressKeyForRepresentedString:(NSString *)representedString
++ (BOOL)pressKeyForRepresentedString:(NSString *)representedString
 {
     UIKBKeyplaneView *keyplaneView = [[UIApplication sharedApplication] keyplaneView];
     NSArray *keys = [[keyplaneView keyplane] keys];
@@ -37,12 +37,12 @@
     return YES;
 }
 
-- (BOOL)pressKeyForCharacter:(unichar)character
++ (BOOL)pressKeyForCharacter:(unichar)character
 {
     return [self pressKeyForRepresentedString:[NSString stringWithFormat:@"%C", character]];
 }
 
-- (BOOL)enterCharacter:(unichar)character
++ (BOOL)enterCharacter:(unichar)character
 {
     if ([self pressKeyForCharacter:character]) return YES;
     if ([self pressKeyForRepresentedString:@"Shift"] == NO) return NO;
@@ -54,7 +54,7 @@
     return NO;
 }
 
-- (BOOL)enterString:(NSString *)string
++ (BOOL)enterString:(NSString *)string
 {
     for (NSUInteger index = 0; index < [string length]; index ++) {
         if ([self enterCharacter:[string characterAtIndex:index]] == NO) {
