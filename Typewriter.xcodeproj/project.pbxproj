@@ -29,14 +29,11 @@
 		94A8A205163FF5FE003425BA /* TWRTypingCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A8A204163FF5FE003425BA /* TWRTypingCommand.m */; };
 		94A8A20B163FFA00003425BA /* TWREnterCharacterCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A8A20A163FFA00003425BA /* TWREnterCharacterCommand.m */; };
 		94A8A20E163FFA7B003425BA /* TWRPressShiftCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A8A20D163FFA7B003425BA /* TWRPressShiftCommand.m */; };
-		94A8A211163FFA8F003425BA /* TWRPressSpaceCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A8A210163FFA8F003425BA /* TWRPressSpaceCommand.m */; };
 		94A8A21A163FFF62003425BA /* TWRTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A8A219163FFF62003425BA /* TWRTestViewController.m */; };
 		94A8A2241640210E003425BA /* TWRTypistSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A8A1FF163FE76B003425BA /* TWRTypistSpec.m */; };
 		94A8A2251640210E003425BA /* TWRApplicationKeyboardSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 94938343163F21C70098768D /* TWRApplicationKeyboardSpec.m */; };
 		94A8A2261640210E003425BA /* TWREnterCharacterCommandSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A8A212163FFC76003425BA /* TWREnterCharacterCommandSpec.m */; };
 		94A8A2271640210E003425BA /* TWRPressShiftCommandSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A8A213163FFC76003425BA /* TWRPressShiftCommandSpec.m */; };
-		94A8A2281640210E003425BA /* TWRPressSpaceCommandSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A8A214163FFC76003425BA /* TWRPressSpaceCommandSpec.m */; };
-		94A8A231164023FD003425BA /* TWRTypingSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A8A22216401CAE003425BA /* TWRTypingSpec.m */; };
 		BB27B502D4684453BCBC9D98 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F27FF5F51C614060939C8A05 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -105,14 +102,10 @@
 		94A8A20A163FFA00003425BA /* TWREnterCharacterCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWREnterCharacterCommand.m; sourceTree = "<group>"; };
 		94A8A20C163FFA7B003425BA /* TWRPressShiftCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWRPressShiftCommand.h; sourceTree = "<group>"; };
 		94A8A20D163FFA7B003425BA /* TWRPressShiftCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWRPressShiftCommand.m; sourceTree = "<group>"; };
-		94A8A20F163FFA8F003425BA /* TWRPressSpaceCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWRPressSpaceCommand.h; sourceTree = "<group>"; };
-		94A8A210163FFA8F003425BA /* TWRPressSpaceCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWRPressSpaceCommand.m; sourceTree = "<group>"; };
 		94A8A212163FFC76003425BA /* TWREnterCharacterCommandSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWREnterCharacterCommandSpec.m; sourceTree = "<group>"; };
 		94A8A213163FFC76003425BA /* TWRPressShiftCommandSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWRPressShiftCommandSpec.m; sourceTree = "<group>"; };
-		94A8A214163FFC76003425BA /* TWRPressSpaceCommandSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWRPressSpaceCommandSpec.m; sourceTree = "<group>"; };
 		94A8A218163FFF62003425BA /* TWRTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWRTestViewController.h; sourceTree = "<group>"; };
 		94A8A219163FFF62003425BA /* TWRTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWRTestViewController.m; sourceTree = "<group>"; };
-		94A8A22216401CAE003425BA /* TWRTypingSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWRTypingSpec.m; sourceTree = "<group>"; };
 		D9E2430E42114D2AADC68FDE /* libPods-Specs.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Specs.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F27FF5F51C614060939C8A05 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -215,12 +208,10 @@
 		949382E5163F11010098768D /* Specs */ = {
 			isa = PBXGroup;
 			children = (
-				94A8A22216401CAE003425BA /* TWRTypingSpec.m */,
 				94A8A1FF163FE76B003425BA /* TWRTypistSpec.m */,
 				94938343163F21C70098768D /* TWRApplicationKeyboardSpec.m */,
 				94A8A212163FFC76003425BA /* TWREnterCharacterCommandSpec.m */,
 				94A8A213163FFC76003425BA /* TWRPressShiftCommandSpec.m */,
-				94A8A214163FFC76003425BA /* TWRPressSpaceCommandSpec.m */,
 				94938333163F180A0098768D /* TWRSpecHelper.h */,
 				94A8A218163FFF62003425BA /* TWRTestViewController.h */,
 				94A8A219163FFF62003425BA /* TWRTestViewController.m */,
@@ -279,8 +270,6 @@
 				94A8A20A163FFA00003425BA /* TWREnterCharacterCommand.m */,
 				94A8A20C163FFA7B003425BA /* TWRPressShiftCommand.h */,
 				94A8A20D163FFA7B003425BA /* TWRPressShiftCommand.m */,
-				94A8A20F163FFA8F003425BA /* TWRPressSpaceCommand.h */,
-				94A8A210163FFA8F003425BA /* TWRPressSpaceCommand.m */,
 			);
 			name = "Typing commands";
 			sourceTree = "<group>";
@@ -448,7 +437,6 @@
 				94A8A205163FF5FE003425BA /* TWRTypingCommand.m in Sources */,
 				94A8A20B163FFA00003425BA /* TWREnterCharacterCommand.m in Sources */,
 				94A8A20E163FFA7B003425BA /* TWRPressShiftCommand.m in Sources */,
-				94A8A211163FFA8F003425BA /* TWRPressSpaceCommand.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,8 +449,6 @@
 				94A8A2251640210E003425BA /* TWRApplicationKeyboardSpec.m in Sources */,
 				94A8A2261640210E003425BA /* TWREnterCharacterCommandSpec.m in Sources */,
 				94A8A2271640210E003425BA /* TWRPressShiftCommandSpec.m in Sources */,
-				94A8A2281640210E003425BA /* TWRPressSpaceCommandSpec.m in Sources */,
-				94A8A231164023FD003425BA /* TWRTypingSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

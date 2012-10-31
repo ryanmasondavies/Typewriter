@@ -18,6 +18,13 @@ before(^{
     [[[UIApplication sharedApplication] keyWindow] setRootViewController:viewController];
 });
 
+it(@"should enter a space character", ^{
+    [[viewController textField] becomeFirstResponder];
+    TWREnterCharacterCommand *enterCharacterCommand = [[TWREnterCharacterCommand alloc] initWithCharacter:' '];
+    [enterCharacterCommand execute];
+    expect([[viewController textField] text]).to.equal(@" ");
+});
+
 context(@"when the keyboard is displaying lowercase characters", ^{
     before(^{
         [[viewController textField] setAutocapitalizationType:UITextAutocapitalizationTypeNone];

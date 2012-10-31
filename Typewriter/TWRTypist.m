@@ -9,18 +9,13 @@
 #import "TWRTypist.h"
 #import "TWREnterCharacterCommand.h"
 #import "TWRPressShiftCommand.h"
-#import "TWRPressSpaceCommand.h"
 
 @implementation TWRTypist
 
-- (id)init
+- (void)executeCommand:(TWRTypingCommand *)command
 {
-    self = [super init];
-    if (self) {
-        self.stack = [[NSMutableArray alloc] init];
-    }
-    
-    return self;
+    [command execute];
+    CFRunLoopRunInMode(kCFRunLoopDefaultMode, 0.2f, NO);
 }
 
 - (void)enterString:(NSString *)string
@@ -28,23 +23,11 @@
     for (NSUInteger index = 0; index < [string length]; index ++) {
         unichar character = [string characterAtIndex:index];
         
-        if ([[NSCharacterSet uppercaseLetterCharacterSet] characterIsMember:character]) {
-            [[self stack] addObject:[TWRPressShiftCommand new]];
-        }
+        if ([[NSCharacterSet uppercaseLetterCharacterSet] characterIsMember:character])
+            [self executeCommand:[TWRPressShiftCommand new]];
         
-        if (character == ' ') {
-            [[self stack] addObject:[TWRPressSpaceCommand new]];
-        } else {
-            TWREnterCharacterCommand *enterCharacter = [[TWREnterCharacterCommand alloc] init];
-            [enterCharacter setCharacter:character];
-            [[self stack] addObject:enterCharacter];
-        }
+        [self executeCommand:[[TWREnterCharacterCommand alloc] initWithCharacter:character]];
     }
-    
-    [[self stack] enumerateObjectsUsingBlock:^(TWRTypingCommand *command, NSUInteger idx, BOOL *stop) {
-        [command execute];
-        CFRunLoopRunInMode(kCFRunLoopDefaultMode, 0.05f, NO);
-    }];
 }
 
 @end
