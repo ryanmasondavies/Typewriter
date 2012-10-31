@@ -32,7 +32,7 @@
     keyCenter.y = key.frame.origin.y + (key.frame.size.height / 2);
     [[[UIApplication sharedApplication] keyplaneView] tapAtPosition:keyCenter];
     
-    CFRunLoopRunInMode(kCFRunLoopDefaultMode, 0.2f, NO);
+    CFRunLoopRunInMode(kCFRunLoopDefaultMode, 0.15f, NO);
     
     return YES;
 }
