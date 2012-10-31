@@ -188,8 +188,7 @@
 			children = (
 				94A8A1FA163FE765003425BA /* TWRTypist.h */,
 				94A8A1FB163FE765003425BA /* TWRTypist.m */,
-				94938327163F17440098768D /* UIApplication+TWRKeyboard.h */,
-				94938328163F17440098768D /* UIApplication+TWRKeyboard.m */,
+				94F14FEA1641351300ACA5E7 /* Locating the keyboard */,
 				94A8A202163FF5E7003425BA /* Typing commands */,
 				94A8A1F1163FE237003425BA /* Private APIs */,
 				949382BC163F10CB0098768D /* Supporting Files */,
@@ -272,6 +271,15 @@
 				94A8A20D163FFA7B003425BA /* TWRPressShiftCommand.m */,
 			);
 			name = "Typing commands";
+			sourceTree = "<group>";
+		};
+		94F14FEA1641351300ACA5E7 /* Locating the keyboard */ = {
+			isa = PBXGroup;
+			children = (
+				94938327163F17440098768D /* UIApplication+TWRKeyboard.h */,
+				94938328163F17440098768D /* UIApplication+TWRKeyboard.m */,
+			);
+			name = "Locating the keyboard";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
