@@ -11,23 +11,20 @@
 
 SpecBegin(TWRApplicationKeyboard)
 
-__block TWRTestViewController *viewController;
-
-before(^{
-    viewController = [[TWRTestViewController alloc] init];
-    [[[UIApplication sharedApplication] keyWindow] setRootViewController:viewController];
-});
-
 it(@"should return the keyboard view when the keyboard is displayed", ^{
-    [[viewController textView] becomeFirstResponder];
+    UIViewController *viewController = [[UIViewController alloc] init];
+    [[[UIApplication sharedApplication] keyWindow] setRootViewController:viewController];
     
-    UIKBKeyplaneView *keyboardView = [[UIApplication sharedApplication] keyplaneView];
-    expect(keyboardView).toNot.beNil();
+    UITextField *textField = [[UITextField alloc] init];
+    [textField setFrame:[[viewController view] frame]];
+    [[viewController view] addSubview:textField];
+    [textField becomeFirstResponder];
+    
+    expect([[UIApplication sharedApplication] keyplaneView]).toNot.beNil();
 });
 
 it(@"should return nil when they keyboard is not displayed", ^{
-    UIKBKeyplaneView *keyboardView = [[UIApplication sharedApplication] keyplaneView];
-    expect(keyboardView).to.beNil();
+    expect([[UIApplication sharedApplication] keyplaneView]).to.beNil();
 });
 
 after(^{

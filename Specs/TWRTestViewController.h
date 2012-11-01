@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TWRTestViewController : UIViewController
-@property (strong, nonatomic) UITextView *textView;
+@interface TWRTestViewController : UIViewController <UITextFieldDelegate, UITextViewDelegate>
+@property (nonatomic, getter = wasReturnKeyPressed) BOOL returnKeyPressed;
 @end

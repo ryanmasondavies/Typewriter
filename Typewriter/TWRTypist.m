@@ -78,4 +78,9 @@
     return [self pressKeyForRepresentedString:@"\n"];
 }
 
++ (BOOL)pressGoKey
+{
+    return [self pressReturnKey];
+}
+
 @end

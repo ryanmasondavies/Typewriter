@@ -10,13 +10,9 @@
 
 @implementation TWRTestViewController
 
-- (void)viewDidLoad
+-(BOOL)textFieldShouldReturn:(UITextField *)textField
 {
-    [super viewDidLoad];
-    
-    self.textView = [[UITextView alloc] init];
-    [[self textView] setFrame:[[self view] frame]];
-    [[self view] addSubview:[self textView]];
+    return (self.returnKeyPressed = YES);
 }
 
 @end

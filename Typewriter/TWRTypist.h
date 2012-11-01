@@ -13,5 +13,6 @@
 + (BOOL)typeString:(NSString *)string;
 
 + (BOOL)pressReturnKey;
++ (BOOL)pressGoKey;
 
 @end

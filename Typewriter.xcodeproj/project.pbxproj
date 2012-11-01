@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		71541D498DE648BFA8261402 /* libPods-Specs.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D9E2430E42114D2AADC68FDE /* libPods-Specs.a */; };
+		9461284D1642995100DFA56A /* TWRSpecHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 9461284C1642995100DFA56A /* TWRSpecHelper.m */; };
 		949382BA163F10CB0098768D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 949382B9163F10CB0098768D /* Foundation.framework */; };
 		949382C9163F10CB0098768D /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 949382C8163F10CB0098768D /* SenTestingKit.framework */; };
 		949382CC163F10CB0098768D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 949382B9163F10CB0098768D /* Foundation.framework */; };
@@ -63,6 +64,7 @@
 /* Begin PBXFileReference section */
 		0B85CCF52CC5408E84CD52BE /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		4A2A28075CFF4C1D996A3BD6 /* Pods-Specs.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Specs.xcconfig"; path = "Pods/Pods-Specs.xcconfig"; sourceTree = SOURCE_ROOT; };
+		9461284C1642995100DFA56A /* TWRSpecHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWRSpecHelper.m; sourceTree = "<group>"; };
 		949382B6163F10CB0098768D /* libTypewriter.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTypewriter.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		949382B9163F10CB0098768D /* Foundation.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		949382BD163F10CB0098768D /* Typewriter-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Typewriter-Prefix.pch"; sourceTree = "<group>"; };
@@ -198,6 +200,7 @@
 				94A8A1FF163FE76B003425BA /* TWRTypistSpec.m */,
 				94938343163F21C70098768D /* TWRApplicationKeyboardSpec.m */,
 				94938333163F180A0098768D /* TWRSpecHelper.h */,
+				9461284C1642995100DFA56A /* TWRSpecHelper.m */,
 				94A8A218163FFF62003425BA /* TWRTestViewController.h */,
 				94A8A219163FFF62003425BA /* TWRTestViewController.m */,
 				949382EB163F11430098768D /* Supporting Files */,
@@ -403,6 +406,7 @@
 				94A8A21A163FFF62003425BA /* TWRTestViewController.m in Sources */,
 				94A8A2241640210E003425BA /* TWRTypistSpec.m in Sources */,
 				94A8A2251640210E003425BA /* TWRApplicationKeyboardSpec.m in Sources */,
+				9461284D1642995100DFA56A /* TWRSpecHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,3 +10,5 @@
 #import <Expecta/Expecta.h>
 #import <Specta/Specta.h>
 #import "TWRTestViewController.h"
+
+NSString * stringByMergingStrings(NSArray *strings);
