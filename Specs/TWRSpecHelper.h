@@ -11,4 +11,4 @@
 #import <Specta/Specta.h>
 #import "TWRTestViewController.h"
 
-NSString * stringByMergingStrings(NSArray *strings);
+NSString * TWRStringByMergingStrings(NSArray *strings);

@@ -73,70 +73,70 @@ context(@"when using the ASCII keyboard type in lowercase", ^{
     });
     
     it(@"should enter combinations of lowercase and uppercase characters", ^{
-        NSString *string = stringByMergingStrings(@[kLowercaseCharacters, kUppercaseCharacters]);
+        NSString *string = TWRStringByMergingStrings(@[kLowercaseCharacters, kUppercaseCharacters]);
         BOOL result = [TWRTypist typeString:string];
         expect(result).to.beTruthy();
         expect([textField text]).to.equal(string);
     });
     
     it(@"should enter combinations of lowercase and numerical characters", ^{
-        NSString *string = stringByMergingStrings(@[kLowercaseCharacters, kNumericalCharacters]);
+        NSString *string = TWRStringByMergingStrings(@[kLowercaseCharacters, kNumericalCharacters]);
         BOOL result = [TWRTypist typeString:string];
         expect(result).to.beTruthy();
         expect([textField text]).to.equal(string);
     });
     
     it(@"should enter combinations of lowercase and punctuation characters", ^{
-        NSString *string = stringByMergingStrings(@[kLowercaseCharacters, kPunctuationCharacters]);
+        NSString *string = TWRStringByMergingStrings(@[kLowercaseCharacters, kPunctuationCharacters]);
         BOOL result = [TWRTypist typeString:string];
         expect(result).to.beTruthy();
         expect([textField text]).to.equal(string);
     });
     
     it(@"should enter combinations of lowercase and special characters", ^{
-        NSString *string = stringByMergingStrings(@[kLowercaseCharacters, kSpecialCharacters]);
+        NSString *string = TWRStringByMergingStrings(@[kLowercaseCharacters, kSpecialCharacters]);
         BOOL result = [TWRTypist typeString:string];
         expect(result).to.beTruthy();
         expect([textField text]).to.equal(string);
     });
     
     it(@"should enter combinations of uppercase and numerical characters", ^{
-        NSString *string = stringByMergingStrings(@[kUppercaseCharacters, kNumericalCharacters]);
+        NSString *string = TWRStringByMergingStrings(@[kUppercaseCharacters, kNumericalCharacters]);
         BOOL result = [TWRTypist typeString:string];
         expect(result).to.beTruthy();
         expect([textField text]).to.equal(string);
     });
     
     it(@"should enter combinations of uppercase and punctuation characters", ^{
-        NSString *string = stringByMergingStrings(@[kUppercaseCharacters, kPunctuationCharacters]);
+        NSString *string = TWRStringByMergingStrings(@[kUppercaseCharacters, kPunctuationCharacters]);
         BOOL result = [TWRTypist typeString:string];
         expect(result).to.beTruthy();
         expect([textField text]).to.equal(string);
     });
     
     it(@"should enter combinations of uppercase and special characters", ^{
-        NSString *string = stringByMergingStrings(@[kUppercaseCharacters, kSpecialCharacters]);
+        NSString *string = TWRStringByMergingStrings(@[kUppercaseCharacters, kSpecialCharacters]);
         BOOL result = [TWRTypist typeString:string];
         expect(result).to.beTruthy();
         expect([textField text]).to.equal(string);
     });
     
     it(@"should enter combinations of numerical and punctuation characters", ^{
-        NSString *string = stringByMergingStrings(@[kNumericalCharacters, kPunctuationCharacters]);
+        NSString *string = TWRStringByMergingStrings(@[kNumericalCharacters, kPunctuationCharacters]);
         BOOL result = [TWRTypist typeString:string];
         expect(result).to.beTruthy();
         expect([textField text]).to.equal(string);
     });
     
     it(@"should enter combinations of numerical and special characters", ^{
-        NSString *string = stringByMergingStrings(@[kNumericalCharacters, kSpecialCharacters]);
+        NSString *string = TWRStringByMergingStrings(@[kNumericalCharacters, kSpecialCharacters]);
         BOOL result = [TWRTypist typeString:string];
         expect(result).to.beTruthy();
         expect([textField text]).to.equal(string);
     });
     
     it(@"should enter combinations of punctuation and special characters", ^{
-        NSString *string = stringByMergingStrings(@[kPunctuationCharacters, kSpecialCharacters]);
+        NSString *string = TWRStringByMergingStrings(@[kPunctuationCharacters, kSpecialCharacters]);
         BOOL result = [TWRTypist typeString:string];
         expect(result).to.beTruthy();
         expect([textField text]).to.equal(string);
@@ -193,70 +193,70 @@ context(@"when using the ASCII keyboard type in uppercase", ^{
     });
     
     it(@"should enter combinations of lowercase and uppercase characters", ^{
-        NSString *string = stringByMergingStrings(@[kLowercaseCharacters, kUppercaseCharacters]);
+        NSString *string = TWRStringByMergingStrings(@[kLowercaseCharacters, kUppercaseCharacters]);
         BOOL result = [TWRTypist typeString:string];
         expect(result).to.beTruthy();
         expect([textField text]).to.equal(string);
     });
     
     it(@"should enter combinations of lowercase and numerical characters", ^{
-        NSString *string = stringByMergingStrings(@[kLowercaseCharacters, kNumericalCharacters]);
+        NSString *string = TWRStringByMergingStrings(@[kLowercaseCharacters, kNumericalCharacters]);
         BOOL result = [TWRTypist typeString:string];
         expect(result).to.beTruthy();
         expect([textField text]).to.equal(string);
     });
     
     it(@"should enter combinations of lowercase and punctuation characters", ^{
-        NSString *string = stringByMergingStrings(@[kLowercaseCharacters, kPunctuationCharacters]);
+        NSString *string = TWRStringByMergingStrings(@[kLowercaseCharacters, kPunctuationCharacters]);
         BOOL result = [TWRTypist typeString:string];
         expect(result).to.beTruthy();
         expect([textField text]).to.equal(string);
     });
     
     it(@"should enter combinations of lowercase and special characters", ^{
-        NSString *string = stringByMergingStrings(@[kLowercaseCharacters, kSpecialCharacters]);
+        NSString *string = TWRStringByMergingStrings(@[kLowercaseCharacters, kSpecialCharacters]);
         BOOL result = [TWRTypist typeString:string];
         expect(result).to.beTruthy();
         expect([textField text]).to.equal(string);
     });
     
     it(@"should enter combinations of uppercase and numerical characters", ^{
-        NSString *string = stringByMergingStrings(@[kUppercaseCharacters, kNumericalCharacters]);
+        NSString *string = TWRStringByMergingStrings(@[kUppercaseCharacters, kNumericalCharacters]);
         BOOL result = [TWRTypist typeString:string];
         expect(result).to.beTruthy();
         expect([textField text]).to.equal(string);
     });
     
     it(@"should enter combinations of uppercase and punctuation characters", ^{
-        NSString *string = stringByMergingStrings(@[kUppercaseCharacters, kPunctuationCharacters]);
+        NSString *string = TWRStringByMergingStrings(@[kUppercaseCharacters, kPunctuationCharacters]);
         BOOL result = [TWRTypist typeString:string];
         expect(result).to.beTruthy();
         expect([textField text]).to.equal(string);
     });
     
     it(@"should enter combinations of uppercase and special characters", ^{
-        NSString *string = stringByMergingStrings(@[kUppercaseCharacters, kSpecialCharacters]);
+        NSString *string = TWRStringByMergingStrings(@[kUppercaseCharacters, kSpecialCharacters]);
         BOOL result = [TWRTypist typeString:string];
         expect(result).to.beTruthy();
         expect([textField text]).to.equal(string);
     });
     
     it(@"should enter combinations of numerical and punctuation characters", ^{
-        NSString *string = stringByMergingStrings(@[kNumericalCharacters, kPunctuationCharacters]);
+        NSString *string = TWRStringByMergingStrings(@[kNumericalCharacters, kPunctuationCharacters]);
         BOOL result = [TWRTypist typeString:string];
         expect(result).to.beTruthy();
         expect([textField text]).to.equal(string);
     });
     
     it(@"should enter combinations of numerical and special characters", ^{
-        NSString *string = stringByMergingStrings(@[kNumericalCharacters, kSpecialCharacters]);
+        NSString *string = TWRStringByMergingStrings(@[kNumericalCharacters, kSpecialCharacters]);
         BOOL result = [TWRTypist typeString:string];
         expect(result).to.beTruthy();
         expect([textField text]).to.equal(string);
     });
     
     it(@"should enter combinations of punctuation and special characters", ^{
-        NSString *string = stringByMergingStrings(@[kPunctuationCharacters, kSpecialCharacters]);
+        NSString *string = TWRStringByMergingStrings(@[kPunctuationCharacters, kSpecialCharacters]);
         BOOL result = [TWRTypist typeString:string];
         expect(result).to.beTruthy();
         expect([textField text]).to.equal(string);

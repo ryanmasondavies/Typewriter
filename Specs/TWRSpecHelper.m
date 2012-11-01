@@ -8,7 +8,7 @@
 
 #import "TWRSpecHelper.h"
 
-NSString * stringByMergingStrings(NSArray *strings)
+NSString * TWRStringByMergingStrings(NSArray *strings)
 {
     __block NSUInteger maxLength = 0;
     [strings enumerateObjectsUsingBlock:^(NSString *string, NSUInteger idx, BOOL *stop) {
