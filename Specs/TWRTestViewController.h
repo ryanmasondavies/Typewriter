@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface TWRTestViewController : UIViewController
-@property (strong, nonatomic) UITextField *textField;
+@property (strong, nonatomic) UITextView *textView;
 @end

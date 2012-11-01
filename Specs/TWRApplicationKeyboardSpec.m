@@ -19,7 +19,7 @@ before(^{
 });
 
 it(@"should return the keyboard view when the keyboard is displayed", ^{
-    [[viewController textField] becomeFirstResponder];
+    [[viewController textView] becomeFirstResponder];
     
     UIKBKeyplaneView *keyboardView = [[UIApplication sharedApplication] keyplaneView];
     expect(keyboardView).toNot.beNil();

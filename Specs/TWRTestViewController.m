@@ -14,10 +14,9 @@
 {
     [super viewDidLoad];
     
-    self.textField = [[UITextField alloc] init];
-    [[self textField] setFrame:CGRectMake(32, 32, 128, 24)];
-    [[self textField] setAutocorrectionType:UITextAutocorrectionTypeNo];
-    [[self view] addSubview:[self textField]];
+    self.textView = [[UITextView alloc] init];
+    [[self textView] setFrame:[[self view] frame]];
+    [[self view] addSubview:[self textView]];
 }
 
 @end

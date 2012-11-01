@@ -64,13 +64,18 @@
 
 + (BOOL)typeString:(NSString *)string
 {
+    CFRunLoopRunInMode(kCFRunLoopDefaultMode, 0.15f, NO);
+    
     for (NSUInteger index = 0; index < [string length]; index ++) {
-        if ([self typeCharacter:[string characterAtIndex:index]] == NO) {
-            return NO;
-        }
+        if ([self typeCharacter:[string characterAtIndex:index]] == NO) return NO;
     }
     
     return YES;
+}
+
++ (BOOL)pressReturnKey
+{
+    return [self pressKeyForRepresentedString:@"\n"];
 }
 
 @end
