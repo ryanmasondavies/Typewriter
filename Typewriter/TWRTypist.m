@@ -83,4 +83,19 @@
     return [self pressReturnKey];
 }
 
++ (BOOL)pressGoogleKey
+{
+    return [self pressReturnKey];
+}
+
++ (BOOL)pressJoinKey
+{
+    return [self pressReturnKey];
+}
+
++ (BOOL)pressNextKey
+{
+    return [self pressReturnKey];
+}
+
 @end

@@ -14,5 +14,8 @@
 
 + (BOOL)pressReturnKey;
 + (BOOL)pressGoKey;
++ (BOOL)pressGoogleKey;
++ (BOOL)pressJoinKey;
++ (BOOL)pressNextKey;
 
 @end

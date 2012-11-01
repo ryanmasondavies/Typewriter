@@ -301,4 +301,61 @@ context(@"when displaying the Go key", ^{
     });
 });
 
+context(@"when displaying the Google key", ^{
+    __block UITextField *textField;
+    
+    before(^{
+        textField = [[UITextField alloc] init];
+        [textField setDelegate:viewController];
+        [textField setFrame:[[viewController view] frame]];
+        [textField setKeyboardType:UIKeyboardTypeASCIICapable];
+        [textField setReturnKeyType:UIReturnKeyGoogle];
+        [[viewController view] addSubview:textField];
+        [textField becomeFirstResponder];
+    });
+    
+    it(@"should notify the delegate", ^{
+        expect([TWRTypist pressGoogleKey]).to.beTruthy();
+        expect([viewController wasReturnKeyPressed]).to.beTruthy();
+    });
+});
+
+context(@"when displaying the Join key", ^{
+    __block UITextField *textField;
+    
+    before(^{
+        textField = [[UITextField alloc] init];
+        [textField setDelegate:viewController];
+        [textField setFrame:[[viewController view] frame]];
+        [textField setKeyboardType:UIKeyboardTypeASCIICapable];
+        [textField setReturnKeyType:UIReturnKeyJoin];
+        [[viewController view] addSubview:textField];
+        [textField becomeFirstResponder];
+    });
+    
+    it(@"should notify the delegate", ^{
+        expect([TWRTypist pressJoinKey]).to.beTruthy();
+        expect([viewController wasReturnKeyPressed]).to.beTruthy();
+    });
+});
+
+context(@"when displaying the Next key", ^{
+    __block UITextField *textField;
+    
+    before(^{
+        textField = [[UITextField alloc] init];
+        [textField setDelegate:viewController];
+        [textField setFrame:[[viewController view] frame]];
+        [textField setKeyboardType:UIKeyboardTypeASCIICapable];
+        [textField setReturnKeyType:UIReturnKeyNext];
+        [[viewController view] addSubview:textField];
+        [textField becomeFirstResponder];
+    });
+    
+    it(@"should notify the delegate", ^{
+        expect([TWRTypist pressNextKey]).to.beTruthy();
+        expect([viewController wasReturnKeyPressed]).to.beTruthy();
+    });
+});
+
 SpecEnd
