@@ -98,4 +98,34 @@
     return [self pressReturnKey];
 }
 
++ (BOOL)pressRouteKey
+{
+    return [self pressReturnKey];
+}
+
++ (BOOL)pressSearchKey
+{
+    return [self pressReturnKey];
+}
+
++ (BOOL)pressSendKey
+{
+    return [self pressReturnKey];
+}
+
++ (BOOL)pressYahooKey
+{
+    return [self pressReturnKey];
+}
+
++ (BOOL)pressDoneKey
+{
+    return [self pressReturnKey];
+}
+
++ (BOOL)pressEmergencyCallKey
+{
+    return [self pressReturnKey];
+}
+
 @end

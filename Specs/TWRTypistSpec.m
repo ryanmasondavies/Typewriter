@@ -295,7 +295,7 @@ context(@"when displaying the Go key", ^{
         [textField becomeFirstResponder];
     });
     
-    it(@"should notify the delegate", ^{
+    it(@"should notify the delegate when pressed", ^{
         expect([TWRTypist pressGoKey]).to.beTruthy();
         expect([viewController wasReturnKeyPressed]).to.beTruthy();
     });
@@ -314,7 +314,7 @@ context(@"when displaying the Google key", ^{
         [textField becomeFirstResponder];
     });
     
-    it(@"should notify the delegate", ^{
+    it(@"should notify the delegate when pressed", ^{
         expect([TWRTypist pressGoogleKey]).to.beTruthy();
         expect([viewController wasReturnKeyPressed]).to.beTruthy();
     });
@@ -333,7 +333,7 @@ context(@"when displaying the Join key", ^{
         [textField becomeFirstResponder];
     });
     
-    it(@"should notify the delegate", ^{
+    it(@"should notify the delegate when pressed", ^{
         expect([TWRTypist pressJoinKey]).to.beTruthy();
         expect([viewController wasReturnKeyPressed]).to.beTruthy();
     });
@@ -352,8 +352,122 @@ context(@"when displaying the Next key", ^{
         [textField becomeFirstResponder];
     });
     
-    it(@"should notify the delegate", ^{
+    it(@"should notify the delegate when pressed", ^{
         expect([TWRTypist pressNextKey]).to.beTruthy();
+        expect([viewController wasReturnKeyPressed]).to.beTruthy();
+    });
+});
+
+context(@"when displaying the Route key", ^{
+    __block UITextField *textField;
+    
+    before(^{
+        textField = [[UITextField alloc] init];
+        [textField setDelegate:viewController];
+        [textField setFrame:[[viewController view] frame]];
+        [textField setKeyboardType:UIKeyboardTypeASCIICapable];
+        [textField setReturnKeyType:UIReturnKeyRoute];
+        [[viewController view] addSubview:textField];
+        [textField becomeFirstResponder];
+    });
+    
+    it(@"should notify the delegate when pressed", ^{
+        expect([TWRTypist pressRouteKey]).to.beTruthy();
+        expect([viewController wasReturnKeyPressed]).to.beTruthy();
+    });
+});
+
+context(@"when displaying the Search key", ^{
+    __block UITextField *textField;
+    
+    before(^{
+        textField = [[UITextField alloc] init];
+        [textField setDelegate:viewController];
+        [textField setFrame:[[viewController view] frame]];
+        [textField setKeyboardType:UIKeyboardTypeASCIICapable];
+        [textField setReturnKeyType:UIReturnKeySearch];
+        [[viewController view] addSubview:textField];
+        [textField becomeFirstResponder];
+    });
+    
+    it(@"should notify the delegate when pressed", ^{
+        expect([TWRTypist pressSearchKey]).to.beTruthy();
+        expect([viewController wasReturnKeyPressed]).to.beTruthy();
+    });
+});
+
+context(@"when displaying the Send key", ^{
+    __block UITextField *textField;
+    
+    before(^{
+        textField = [[UITextField alloc] init];
+        [textField setDelegate:viewController];
+        [textField setFrame:[[viewController view] frame]];
+        [textField setKeyboardType:UIKeyboardTypeASCIICapable];
+        [textField setReturnKeyType:UIReturnKeySend];
+        [[viewController view] addSubview:textField];
+        [textField becomeFirstResponder];
+    });
+    
+    it(@"should notify the delegate when pressed", ^{
+        expect([TWRTypist pressSendKey]).to.beTruthy();
+        expect([viewController wasReturnKeyPressed]).to.beTruthy();
+    });
+});
+
+context(@"when displaying the Yahoo key", ^{
+    __block UITextField *textField;
+    
+    before(^{
+        textField = [[UITextField alloc] init];
+        [textField setDelegate:viewController];
+        [textField setFrame:[[viewController view] frame]];
+        [textField setKeyboardType:UIKeyboardTypeASCIICapable];
+        [textField setReturnKeyType:UIReturnKeyYahoo];
+        [[viewController view] addSubview:textField];
+        [textField becomeFirstResponder];
+    });
+    
+    it(@"should notify the delegate when pressed", ^{
+        expect([TWRTypist pressYahooKey]).to.beTruthy();
+        expect([viewController wasReturnKeyPressed]).to.beTruthy();
+    });
+});
+
+context(@"when displaying the Done key", ^{
+    __block UITextField *textField;
+    
+    before(^{
+        textField = [[UITextField alloc] init];
+        [textField setDelegate:viewController];
+        [textField setFrame:[[viewController view] frame]];
+        [textField setKeyboardType:UIKeyboardTypeASCIICapable];
+        [textField setReturnKeyType:UIReturnKeyDone];
+        [[viewController view] addSubview:textField];
+        [textField becomeFirstResponder];
+    });
+    
+    it(@"should notify the delegate when pressed", ^{
+        expect([TWRTypist pressDoneKey]).to.beTruthy();
+        expect([viewController wasReturnKeyPressed]).to.beTruthy();
+    });
+});
+
+context(@"when displaying the Emergency Call key", ^{
+    __block UITextField *textField;
+    
+    before(^{
+        textField = [[UITextField alloc] init];
+        [textField setDelegate:viewController];
+        [textField setFrame:[[viewController view] frame]];
+        [textField setKeyboardType:UIKeyboardTypeASCIICapable];
+        [textField setReturnKeyType:UIReturnKeyEmergencyCall];
+        [[viewController view] addSubview:textField];
+        [textField becomeFirstResponder];
+    });
+    
+    it(@"should notify the delegate when pressed", ^{
+        expect([TWRTypist pressEmergencyCallKey]).to.beTruthy();
         expect([viewController wasReturnKeyPressed]).to.beTruthy();
     });
 });

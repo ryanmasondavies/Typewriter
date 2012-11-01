@@ -17,5 +17,11 @@
 + (BOOL)pressGoogleKey;
 + (BOOL)pressJoinKey;
 + (BOOL)pressNextKey;
++ (BOOL)pressRouteKey;
++ (BOOL)pressSearchKey;
++ (BOOL)pressSendKey;
++ (BOOL)pressYahooKey;
++ (BOOL)pressDoneKey;
++ (BOOL)pressEmergencyCallKey;
 
 @end
