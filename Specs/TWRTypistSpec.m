@@ -275,7 +275,7 @@ context(@"when displaying the return key", ^{
     });
     
     it(@"should add a newline character when pressed", ^{
-        [TWRTypist pressReturnKey];
+        expect([TWRTypist pressReturnKey]).to.beTruthy();
         expect([[viewController textView] text]).to.equal(@"\n");
     });
 });
