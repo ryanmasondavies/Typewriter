@@ -20,6 +20,11 @@ See RMTTypistSpec for a list of the supported characters and keyboards.
 
 This library uses private APIs and should not be used in production.
 
+Installation
+============
+
+Typewriter can be installed with CocoaPods. Add `pod 'Typewriter'` to your Podfile.
+
 License
 =======
 
