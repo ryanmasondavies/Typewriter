@@ -18,9 +18,7 @@ Other keyboards may be functional, but not tested. Feel free to extend this libr
 
 See RMTTypistSpec for a list of the supported characters and keyboards.
 
-This library uses private APIs and should not be used in production. However, despite this limitation it serves as very useful during testing.
-
-This library is very much a work in progress, and so the API may be subject to simplification and potentially drastic change. A big thanks to the Square crew, as much of the implementation is extracted from KIF (https://github.com/square/KIF).
+This library uses private APIs and should not be used in production.
 
 License
 =======
