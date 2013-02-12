@@ -5,20 +5,15 @@ When an iOS keyboard is present, TWRTypist can be used to enter a string as foll
 
     [TWRTypist typeString:@"Hello world!"];
 
-As of the current moment, the following characters are supported:
+As of 0.1.0, the following character sets are supported:
 *  Uppercase and lowercase letters
 *  Spaces
 *  Punctuation
 *  Special characters
 
-The following keyboards are tested:
-*  ASCII capable (default)
-
-Other keyboards may be functional, but not tested. Feel free to extend this library with tests for other keyboards.
-
 See RMTTypistSpec for a list of the supported characters and keyboards.
 
-This library uses private APIs and should not be used in production.
+Typewriter uses private APIs and should not be used in a production environment.
 
 Installation
 ============
