@@ -21,451 +21,245 @@ before(^{
     [[[UIApplication sharedApplication] keyWindow] setRootViewController:viewController];
 });
 
-context(@"when using the ASCII keyboard type in lowercase", ^{
-    __block UITextField *textField;
-    
+when(@"writing on the ASCII keyboard", ^{
     before(^{
-        textField = [[UITextField alloc] init];
-        [textField setDelegate:viewController];
-        [textField setFrame:[[viewController view] frame]];
-        [textField setKeyboardType:UIKeyboardTypeASCIICapable];
-        [textField setAutocapitalizationType:UITextAutocapitalizationTypeNone];
-        [[viewController view] addSubview:textField];
-        [textField becomeFirstResponder];
+        [[viewController textField] setKeyboardType:UIKeyboardTypeASCIICapable];
     });
     
-    it(@"should enter space characters", ^{
-        BOOL result = [TWRTypist typeString:@" "];
-        expect(result).to.beTruthy();
-        expect([textField text]).to.equal(@" ");
-    });
-    
-    it(@"should enter lowercase characters", ^{
-        BOOL result = [TWRTypist typeString:kLowercaseCharacters];
-        expect(result).to.beTruthy();
-        expect([textField text]).to.equal(kLowercaseCharacters);
-    });
-    
-    it(@"should enter uppercase characters", ^{
-        expect([TWRTypist typeString:kUppercaseCharacters]).to.beTruthy();
-        expect([textField text]).to.equal(kUppercaseCharacters);
-    });
-    
-    it(@"should enter number characters", ^{
-        BOOL result = [TWRTypist typeString:kNumericalCharacters];
-        expect(result).to.beTruthy();
-        expect([textField text]).to.equal(kNumericalCharacters);
-    });
-    
-    it(@"should enter punctuation characters", ^{
-        BOOL result = [TWRTypist typeString:kPunctuationCharacters];
-        expect(result).to.beTruthy();
-        expect([textField text]).to.equal(kPunctuationCharacters);
-    });
-    
-    it(@"should enter special characters", ^{
-        BOOL result = [TWRTypist typeString:kSpecialCharacters];
-        expect(result).to.beTruthy();
-        expect([textField text]).to.equal(kSpecialCharacters);
-    });
-    
-    it(@"should enter combinations of lowercase and uppercase characters", ^{
-        NSString *string = [NSString stringByInterlacingStrings:@[kLowercaseCharacters, kUppercaseCharacters]];
-        BOOL result = [TWRTypist typeString:string];
-        expect(result).to.beTruthy();
-        expect([textField text]).to.equal(string);
-    });
-    
-    it(@"should enter combinations of lowercase and numerical characters", ^{
-        NSString *string = [NSString stringByInterlacingStrings:@[kLowercaseCharacters, kNumericalCharacters]];
-        BOOL result = [TWRTypist typeString:string];
-        expect(result).to.beTruthy();
-        expect([textField text]).to.equal(string);
-    });
-    
-    it(@"should enter combinations of lowercase and punctuation characters", ^{
-        NSString *string = [NSString stringByInterlacingStrings:@[kLowercaseCharacters, kPunctuationCharacters]];
-        BOOL result = [TWRTypist typeString:string];
-        expect(result).to.beTruthy();
-        expect([textField text]).to.equal(string);
-    });
-    
-    it(@"should enter combinations of lowercase and special characters", ^{
-        NSString *string = [NSString stringByInterlacingStrings:@[kLowercaseCharacters, kSpecialCharacters]];
-        BOOL result = [TWRTypist typeString:string];
-        expect(result).to.beTruthy();
-        expect([textField text]).to.equal(string);
-    });
-    
-    it(@"should enter combinations of uppercase and numerical characters", ^{
-        NSString *string = [NSString stringByInterlacingStrings:@[kUppercaseCharacters, kNumericalCharacters]];
-        BOOL result = [TWRTypist typeString:string];
-        expect(result).to.beTruthy();
-        expect([textField text]).to.equal(string);
-    });
-    
-    it(@"should enter combinations of uppercase and punctuation characters", ^{
-        NSString *string = [NSString stringByInterlacingStrings:@[kUppercaseCharacters, kPunctuationCharacters]];
-        BOOL result = [TWRTypist typeString:string];
-        expect(result).to.beTruthy();
-        expect([textField text]).to.equal(string);
-    });
-    
-    it(@"should enter combinations of uppercase and special characters", ^{
-        NSString *string = [NSString stringByInterlacingStrings:@[kUppercaseCharacters, kSpecialCharacters]];
-        BOOL result = [TWRTypist typeString:string];
-        expect(result).to.beTruthy();
-        expect([textField text]).to.equal(string);
-    });
-    
-    it(@"should enter combinations of numerical and punctuation characters", ^{
-        NSString *string = [NSString stringByInterlacingStrings:@[kNumericalCharacters, kPunctuationCharacters]];
-        BOOL result = [TWRTypist typeString:string];
-        expect(result).to.beTruthy();
-        expect([textField text]).to.equal(string);
-    });
-    
-    it(@"should enter combinations of numerical and special characters", ^{
-        NSString *string = [NSString stringByInterlacingStrings:@[kNumericalCharacters, kSpecialCharacters]];
-        BOOL result = [TWRTypist typeString:string];
-        expect(result).to.beTruthy();
-        expect([textField text]).to.equal(string);
-    });
-    
-    it(@"should enter combinations of punctuation and special characters", ^{
-        NSString *string = [NSString stringByInterlacingStrings:@[kPunctuationCharacters, kSpecialCharacters]];
-        BOOL result = [TWRTypist typeString:string];
-        expect(result).to.beTruthy();
-        expect([textField text]).to.equal(string);
-    });
-});
-
-context(@"when using the ASCII keyboard type in uppercase", ^{
-    __block UITextField *textField;
-    
-    before(^{
-        textField = [[UITextField alloc] init];
-        [textField setDelegate:viewController];
-        [textField setFrame:[[viewController view] frame]];
-        [textField setKeyboardType:UIKeyboardTypeASCIICapable];
-        [textField setAutocapitalizationType:UITextAutocapitalizationTypeAllCharacters];
-        [[viewController view] addSubview:textField];
-        [textField becomeFirstResponder];
-    });
-    
-    it(@"should enter space characters", ^{
-        BOOL result = [TWRTypist typeString:@" "];
-        expect(result).to.beTruthy();
-        expect([textField text]).to.equal(@" ");
-    });
+    context(@"in lowercase", ^{
+        it(@"enters space characters", ^{
+            BOOL result = [TWRTypist typeString:@" "];
+            [[@(result) should] beTrue];
+            [[[[viewController textField] text] should] beEqualTo:@" "];
+        });
         
-    it(@"should enter lowercase characters", ^{
-        BOOL result = [TWRTypist typeString:kLowercaseCharacters];
-        expect(result).to.beTruthy();
-        expect([textField text]).to.equal(kLowercaseCharacters);
+        it(@"enters lowercase characters", ^{
+            BOOL result = [TWRTypist typeString:kLowercaseCharacters];
+            [[@(result) should] beTrue];
+            [[[[viewController textField] text] should] beEqualTo:kLowercaseCharacters];
+        });
+        
+        it(@"enters uppercase characters", ^{
+            [[@([TWRTypist typeString:kUppercaseCharacters]) should] beTrue];
+            [[[[viewController textField] text] should] beEqualTo:kUppercaseCharacters];
+        });
+        
+        it(@"enters number characters", ^{
+            BOOL result = [TWRTypist typeString:kNumericalCharacters];
+            [[@(result) should] beTrue];
+            [[[[viewController textField] text] should] beEqualTo:kNumericalCharacters];
+        });
+        
+        it(@"enters punctuation characters", ^{
+            BOOL result = [TWRTypist typeString:kPunctuationCharacters];
+            [[@(result) should] beTrue];
+            [[[[viewController textField] text] should] beEqualTo:kPunctuationCharacters];
+        });
+        
+        it(@"enters special characters", ^{
+            BOOL result = [TWRTypist typeString:kSpecialCharacters];
+            [[@(result) should] beTrue];
+            [[[[viewController textField] text] should] beEqualTo:kSpecialCharacters];
+        });
+        
+        it(@"enters combinations of spaces, lowercase, uppercase, number, punctuation, and special characters", ^{
+            NSString *string = [NSString stringByInterlacingStrings:@[@" ", kLowercaseCharacters, kUppercaseCharacters, kNumericalCharacters, kPunctuationCharacters, kSpecialCharacters]];
+            BOOL result = [TWRTypist typeString:string];
+            [[@(result) should] beTrue];
+            [[[[viewController textField] text] should] beEqualTo:string];
+        });
     });
-    
-    it(@"should enter uppercase characters", ^{
-        BOOL result = [TWRTypist typeString:kUppercaseCharacters];
-        expect(result).to.beTruthy();
-        expect([textField text]).to.equal(kUppercaseCharacters);
-    });
-    
-    it(@"should enter number characters", ^{
-        BOOL result = [TWRTypist typeString:kNumericalCharacters];
-        expect(result).to.beTruthy();
-        expect([textField text]).to.equal(kNumericalCharacters);
-    });
-    
-    it(@"should enter punctuation characters", ^{
-        BOOL result = [TWRTypist typeString:kPunctuationCharacters];
-        expect(result).to.beTruthy();
-        expect([textField text]).to.equal(kPunctuationCharacters);
-    });
-    
-    it(@"should enter special characters", ^{
-        BOOL result = [TWRTypist typeString:kSpecialCharacters];
-        expect(result).to.beTruthy();
-        expect([textField text]).to.equal(kSpecialCharacters);
-    });
-    
-    it(@"should enter combinations of lowercase and uppercase characters", ^{
-        NSString *string = [NSString stringByInterlacingStrings:@[kLowercaseCharacters, kUppercaseCharacters]];
-        BOOL result = [TWRTypist typeString:string];
-        expect(result).to.beTruthy();
-        expect([textField text]).to.equal(string);
-    });
-    
-    it(@"should enter combinations of lowercase and numerical characters", ^{
-        NSString *string = [NSString stringByInterlacingStrings:@[kLowercaseCharacters, kNumericalCharacters]];
-        BOOL result = [TWRTypist typeString:string];
-        expect(result).to.beTruthy();
-        expect([textField text]).to.equal(string);
-    });
-    
-    it(@"should enter combinations of lowercase and punctuation characters", ^{
-        NSString *string = [NSString stringByInterlacingStrings:@[kLowercaseCharacters, kPunctuationCharacters]];
-        BOOL result = [TWRTypist typeString:string];
-        expect(result).to.beTruthy();
-        expect([textField text]).to.equal(string);
-    });
-    
-    it(@"should enter combinations of lowercase and special characters", ^{
-        NSString *string = [NSString stringByInterlacingStrings:@[kLowercaseCharacters, kSpecialCharacters]];
-        BOOL result = [TWRTypist typeString:string];
-        expect(result).to.beTruthy();
-        expect([textField text]).to.equal(string);
-    });
-    
-    it(@"should enter combinations of uppercase and numerical characters", ^{
-        NSString *string = [NSString stringByInterlacingStrings:@[kUppercaseCharacters, kNumericalCharacters]];
-        BOOL result = [TWRTypist typeString:string];
-        expect(result).to.beTruthy();
-        expect([textField text]).to.equal(string);
-    });
-    
-    it(@"should enter combinations of uppercase and punctuation characters", ^{
-        NSString *string = [NSString stringByInterlacingStrings:@[kUppercaseCharacters, kPunctuationCharacters]];
-        BOOL result = [TWRTypist typeString:string];
-        expect(result).to.beTruthy();
-        expect([textField text]).to.equal(string);
-    });
-    
-    it(@"should enter combinations of uppercase and special characters", ^{
-        NSString *string = [NSString stringByInterlacingStrings:@[kUppercaseCharacters, kSpecialCharacters]];
-        BOOL result = [TWRTypist typeString:string];
-        expect(result).to.beTruthy();
-        expect([textField text]).to.equal(string);
-    });
-    
-    it(@"should enter combinations of numerical and punctuation characters", ^{
-        NSString *string = [NSString stringByInterlacingStrings:@[kNumericalCharacters, kPunctuationCharacters]];
-        BOOL result = [TWRTypist typeString:string];
-        expect(result).to.beTruthy();
-        expect([textField text]).to.equal(string);
-    });
-    
-    it(@"should enter combinations of numerical and special characters", ^{
-        NSString *string = [NSString stringByInterlacingStrings:@[kNumericalCharacters, kSpecialCharacters]];
-        BOOL result = [TWRTypist typeString:string];
-        expect(result).to.beTruthy();
-        expect([textField text]).to.equal(string);
-    });
-    
-    it(@"should enter combinations of punctuation and special characters", ^{
-        NSString *string = [NSString stringByInterlacingStrings:@[kPunctuationCharacters, kSpecialCharacters]];
-        BOOL result = [TWRTypist typeString:string];
-        expect(result).to.beTruthy();
-        expect([textField text]).to.equal(string);
-    });
-});
 
-context(@"when displaying the return key", ^{
-    __block UITextView *textView;
-    
-    before(^{
-        textView = [[UITextView alloc] init];
-        [textView setDelegate:viewController];
-        [textView setFrame:[[viewController view] frame]];
-        [textView setKeyboardType:UIKeyboardTypeASCIICapable];
-        [textView setReturnKeyType:UIReturnKeyDefault];
-        [[viewController view] addSubview:textView];
-        [textView becomeFirstResponder];
+    context(@"in uppercase", ^{
+        before(^{
+            [[viewController textField] setAutocapitalizationType:UITextAutocapitalizationTypeAllCharacters];
+        });
+        
+        it(@"enters space characters", ^{
+            BOOL result = [TWRTypist typeString:@" "];
+            [[@(result) should] beTrue];
+            [[[[viewController textField] text] should] beEqualTo:@" "];
+        });
+            
+        it(@"enters lowercase characters", ^{
+            BOOL result = [TWRTypist typeString:kLowercaseCharacters];
+            [[@(result) should] beTrue];
+            [[[[viewController textField] text] should] beEqualTo:kLowercaseCharacters];
+        });
+        
+        it(@"enters uppercase characters", ^{
+            BOOL result = [TWRTypist typeString:kUppercaseCharacters];
+            [[@(result) should] beTrue];
+            [[[[viewController textField] text] should] beEqualTo:kUppercaseCharacters];
+        });
+        
+        it(@"enters number characters", ^{
+            BOOL result = [TWRTypist typeString:kNumericalCharacters];
+            [[@(result) should] beTrue];
+            [[[[viewController textField] text] should] beEqualTo:kNumericalCharacters];
+        });
+        
+        it(@"enters punctuation characters", ^{
+            BOOL result = [TWRTypist typeString:kPunctuationCharacters];
+            [[@(result) should] beTrue];
+            [[[[viewController textField] text] should] beEqualTo:kPunctuationCharacters];
+        });
+        
+        it(@"enters special characters", ^{
+            BOOL result = [TWRTypist typeString:kSpecialCharacters];
+            [[@(result) should] beTrue];
+            [[[[viewController textField] text] should] beEqualTo:kSpecialCharacters];
+        });
+        
+        it(@"enters combinations of spaces, lowercase, uppercase, number, punctuation, and special characters", ^{
+            NSString *string = [NSString stringByInterlacingStrings:@[@" ", kLowercaseCharacters, kUppercaseCharacters, kNumericalCharacters, kPunctuationCharacters, kSpecialCharacters]];
+            BOOL result = [TWRTypist typeString:string];
+            [[@(result) should] beTrue];
+            [[[[viewController textField] text] should] beEqualTo:string];
+        });
     });
-    
-    it(@"should add a newline character when pressed", ^{
-        expect([TWRTypist pressReturnKey]).to.beTruthy();
-        expect([textView text]).to.equal(@"\n");
-    });
-});
 
-context(@"when displaying the Go key", ^{
-    __block UITextField *textField;
-    
-    before(^{
-        textField = [[UITextField alloc] init];
-        [textField setDelegate:viewController];
-        [textField setFrame:[[viewController view] frame]];
-        [textField setKeyboardType:UIKeyboardTypeASCIICapable];
-        [textField setReturnKeyType:UIReturnKeyGo];
-        [[viewController view] addSubview:textField];
-        [textField becomeFirstResponder];
+    when(@"the return key is pressed", ^{
+        before(^{
+            [[viewController textField] setReturnKeyType:UIReturnKeyDefault];
+        });
+        
+        describe(@"the delegate", ^{
+            it(@"is notified", ^{
+                [[@([TWRTypist pressReturnKey]) should] beTrue];
+                [[@([viewController wasReturnKeyPressed]) should] beTrue];
+            });
+        });
     });
-    
-    it(@"should notify the delegate when pressed", ^{
-        expect([TWRTypist pressGoKey]).to.beTruthy();
-        expect([viewController wasReturnKeyPressed]).to.beTruthy();
-    });
-});
 
-context(@"when displaying the Google key", ^{
-    __block UITextField *textField;
-    
-    before(^{
-        textField = [[UITextField alloc] init];
-        [textField setDelegate:viewController];
-        [textField setFrame:[[viewController view] frame]];
-        [textField setKeyboardType:UIKeyboardTypeASCIICapable];
-        [textField setReturnKeyType:UIReturnKeyGoogle];
-        [[viewController view] addSubview:textField];
-        [textField becomeFirstResponder];
+    when(@"the Go key is pressed", ^{
+        before(^{
+            [[viewController textField] setReturnKeyType:UIReturnKeyGo];
+        });
+        
+        describe(@"the delegate", ^{
+            it(@"is notified", ^{
+                [[@([TWRTypist pressGoKey]) should] beTrue];
+                [[@([viewController wasReturnKeyPressed]) should] beTrue];
+            });
+        });
     });
-    
-    it(@"should notify the delegate when pressed", ^{
-        expect([TWRTypist pressGoogleKey]).to.beTruthy();
-        expect([viewController wasReturnKeyPressed]).to.beTruthy();
-    });
-});
 
-context(@"when displaying the Join key", ^{
-    __block UITextField *textField;
-    
-    before(^{
-        textField = [[UITextField alloc] init];
-        [textField setDelegate:viewController];
-        [textField setFrame:[[viewController view] frame]];
-        [textField setKeyboardType:UIKeyboardTypeASCIICapable];
-        [textField setReturnKeyType:UIReturnKeyJoin];
-        [[viewController view] addSubview:textField];
-        [textField becomeFirstResponder];
+    when(@"displaying the Google key", ^{
+        before(^{
+            [[viewController textField] setReturnKeyType:UIReturnKeyGoogle];
+        });
+        
+        describe(@"the delegate", ^{
+            it(@"is notified", ^{
+                [[@([TWRTypist pressGoogleKey]) should] beTrue];
+                [[@([viewController wasReturnKeyPressed]) should] beTrue];
+            });
+        });
     });
-    
-    it(@"should notify the delegate when pressed", ^{
-        expect([TWRTypist pressJoinKey]).to.beTruthy();
-        expect([viewController wasReturnKeyPressed]).to.beTruthy();
-    });
-});
 
-context(@"when displaying the Next key", ^{
-    __block UITextField *textField;
-    
-    before(^{
-        textField = [[UITextField alloc] init];
-        [textField setDelegate:viewController];
-        [textField setFrame:[[viewController view] frame]];
-        [textField setKeyboardType:UIKeyboardTypeASCIICapable];
-        [textField setReturnKeyType:UIReturnKeyNext];
-        [[viewController view] addSubview:textField];
-        [textField becomeFirstResponder];
+    when(@"when displaying the Join key", ^{
+        before(^{
+            [[viewController textField] setReturnKeyType:UIReturnKeyJoin];
+        });
+        
+        describe(@"the delegate", ^{
+            it(@"is notified", ^{
+                [[@([TWRTypist pressJoinKey]) should] beTrue];
+                [[@([viewController wasReturnKeyPressed]) should] beTrue];
+            });
+        });
     });
-    
-    it(@"should notify the delegate when pressed", ^{
-        expect([TWRTypist pressNextKey]).to.beTruthy();
-        expect([viewController wasReturnKeyPressed]).to.beTruthy();
-    });
-});
 
-context(@"when displaying the Route key", ^{
-    __block UITextField *textField;
-    
-    before(^{
-        textField = [[UITextField alloc] init];
-        [textField setDelegate:viewController];
-        [textField setFrame:[[viewController view] frame]];
-        [textField setKeyboardType:UIKeyboardTypeASCIICapable];
-        [textField setReturnKeyType:UIReturnKeyRoute];
-        [[viewController view] addSubview:textField];
-        [textField becomeFirstResponder];
+    when(@"displaying the Next key", ^{
+        before(^{
+            [[viewController textField] setReturnKeyType:UIReturnKeyNext];
+        });
+        
+        describe(@"the delegate", ^{
+            it(@"is notified", ^{
+                [[@([TWRTypist pressNextKey]) should] beTrue];
+                [[@([viewController wasReturnKeyPressed]) should] beTrue];
+            });
+        });
     });
-    
-    it(@"should notify the delegate when pressed", ^{
-        expect([TWRTypist pressRouteKey]).to.beTruthy();
-        expect([viewController wasReturnKeyPressed]).to.beTruthy();
-    });
-});
 
-context(@"when displaying the Search key", ^{
-    __block UITextField *textField;
-    
-    before(^{
-        textField = [[UITextField alloc] init];
-        [textField setDelegate:viewController];
-        [textField setFrame:[[viewController view] frame]];
-        [textField setKeyboardType:UIKeyboardTypeASCIICapable];
-        [textField setReturnKeyType:UIReturnKeySearch];
-        [[viewController view] addSubview:textField];
-        [textField becomeFirstResponder];
+    when(@"displaying the Route key", ^{
+        before(^{
+            [[viewController textField] setReturnKeyType:UIReturnKeyRoute];
+        });
+        
+        describe(@"the delegate", ^{
+            it(@"is notified", ^{
+                [[@([TWRTypist pressRouteKey]) should] beTrue];
+                [[@([viewController wasReturnKeyPressed]) should] beTrue];
+            });
+        });
     });
-    
-    it(@"should notify the delegate when pressed", ^{
-        expect([TWRTypist pressSearchKey]).to.beTruthy();
-        expect([viewController wasReturnKeyPressed]).to.beTruthy();
-    });
-});
 
-context(@"when displaying the Send key", ^{
-    __block UITextField *textField;
-    
-    before(^{
-        textField = [[UITextField alloc] init];
-        [textField setDelegate:viewController];
-        [textField setFrame:[[viewController view] frame]];
-        [textField setKeyboardType:UIKeyboardTypeASCIICapable];
-        [textField setReturnKeyType:UIReturnKeySend];
-        [[viewController view] addSubview:textField];
-        [textField becomeFirstResponder];
+    when(@"displaying the Search key", ^{
+        before(^{
+            [[viewController textField] setReturnKeyType:UIReturnKeySearch];
+        });
+        
+        describe(@"the delegate", ^{
+            it(@"is notified", ^{
+                [[@([TWRTypist pressSearchKey]) should] beTrue];
+                [[@([viewController wasReturnKeyPressed]) should] beTrue];
+            });
+        });
     });
-    
-    it(@"should notify the delegate when pressed", ^{
-        expect([TWRTypist pressSendKey]).to.beTruthy();
-        expect([viewController wasReturnKeyPressed]).to.beTruthy();
-    });
-});
 
-context(@"when displaying the Yahoo key", ^{
-    __block UITextField *textField;
-    
-    before(^{
-        textField = [[UITextField alloc] init];
-        [textField setDelegate:viewController];
-        [textField setFrame:[[viewController view] frame]];
-        [textField setKeyboardType:UIKeyboardTypeASCIICapable];
-        [textField setReturnKeyType:UIReturnKeyYahoo];
-        [[viewController view] addSubview:textField];
-        [textField becomeFirstResponder];
+    when(@"displaying the Send key", ^{
+        before(^{
+            [[viewController textField] setReturnKeyType:UIReturnKeySend];
+        });
+        
+        describe(@"the delegate", ^{
+            it(@"is notified", ^{
+                [[@([TWRTypist pressSendKey]) should] beTrue];
+                [[@([viewController wasReturnKeyPressed]) should] beTrue];
+            });
+        });
     });
-    
-    it(@"should notify the delegate when pressed", ^{
-        expect([TWRTypist pressYahooKey]).to.beTruthy();
-        expect([viewController wasReturnKeyPressed]).to.beTruthy();
-    });
-});
 
-context(@"when displaying the Done key", ^{
-    __block UITextField *textField;
-    
-    before(^{
-        textField = [[UITextField alloc] init];
-        [textField setDelegate:viewController];
-        [textField setFrame:[[viewController view] frame]];
-        [textField setKeyboardType:UIKeyboardTypeASCIICapable];
-        [textField setReturnKeyType:UIReturnKeyDone];
-        [[viewController view] addSubview:textField];
-        [textField becomeFirstResponder];
+    when(@"displaying the Yahoo key", ^{
+        before(^{
+            [[viewController textField] setReturnKeyType:UIReturnKeyYahoo];
+        });
+        
+        describe(@"the delegate", ^{
+            it(@"is notified", ^{
+                [[@([TWRTypist pressYahooKey]) should] beTrue];
+                [[@([viewController wasReturnKeyPressed]) should] beTrue];
+            });
+        });
     });
-    
-    it(@"should notify the delegate when pressed", ^{
-        expect([TWRTypist pressDoneKey]).to.beTruthy();
-        expect([viewController wasReturnKeyPressed]).to.beTruthy();
-    });
-});
 
-context(@"when displaying the Emergency Call key", ^{
-    __block UITextField *textField;
-    
-    before(^{
-        textField = [[UITextField alloc] init];
-        [textField setDelegate:viewController];
-        [textField setFrame:[[viewController view] frame]];
-        [textField setKeyboardType:UIKeyboardTypeASCIICapable];
-        [textField setReturnKeyType:UIReturnKeyEmergencyCall];
-        [[viewController view] addSubview:textField];
-        [textField becomeFirstResponder];
+    when(@"displaying the Done key", ^{
+        before(^{
+            [[viewController textField] setReturnKeyType:UIReturnKeyDone];
+        });
+        
+        describe(@"the delegate", ^{
+            it(@"is notified", ^{
+                [[@([TWRTypist pressDoneKey]) should] beTrue];
+                [[@([viewController wasReturnKeyPressed]) should] beTrue];
+            });
+        });
     });
-    
-    it(@"should notify the delegate when pressed", ^{
-        expect([TWRTypist pressEmergencyCallKey]).to.beTruthy();
-        expect([viewController wasReturnKeyPressed]).to.beTruthy();
+
+    when(@"displaying the Emergency Call key", ^{
+        before(^{
+            [[viewController textField] setReturnKeyType:UIReturnKeyEmergencyCall];
+        });
+        
+        describe(@"the delegate", ^{
+            it(@"is notified", ^{
+                [[@([TWRTypist pressEmergencyCallKey]) should] beTrue];
+                [[@([viewController wasReturnKeyPressed]) should] beTrue];
+            });
+        });
     });
 });
 

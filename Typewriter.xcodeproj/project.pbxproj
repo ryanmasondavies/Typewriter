@@ -80,7 +80,7 @@
 		94A8A1F6163FE49A003425BA /* UIKBTree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIKBTree.m; sourceTree = "<group>"; };
 		94A8A1FA163FE765003425BA /* TWRTypist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWRTypist.h; sourceTree = "<group>"; };
 		94A8A1FB163FE765003425BA /* TWRTypist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWRTypist.m; sourceTree = "<group>"; };
-		94A8A1FF163FE76B003425BA /* TWRTypistSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWRTypistSpec.m; sourceTree = "<group>"; };
+		94A8A1FF163FE76B003425BA /* TWRTypistSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = TWRTypistSpec.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		94A8A218163FFF62003425BA /* TWRTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWRTestViewController.h; sourceTree = "<group>"; };
 		94A8A219163FFF62003425BA /* TWRTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWRTestViewController.m; sourceTree = "<group>"; };
 		94D813A316CAD0CB00EAB73F /* Typewriter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Typewriter.h; sourceTree = "<group>"; };

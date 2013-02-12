@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface TWRTestViewController : UIViewController <UITextFieldDelegate, UITextViewDelegate>
+@property (strong, nonatomic) UITextField *textField;
 @property (nonatomic, getter = wasReturnKeyPressed) BOOL returnKeyPressed;
 @end
