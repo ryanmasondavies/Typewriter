@@ -1,14 +1,16 @@
 //
-//  TWRSpecHelper.m
+//  NSString+TWRInterlacing.m
 //  Typewriter
 //
-//  Created by Ryan Davies on 29/10/2012.
-//  Copyright (c) 2012 Ryan Davies. All rights reserved.
+//  Created by Ryan Davies on 12/02/2013.
+//  Copyright (c) 2013 Ryan Davies. All rights reserved.
 //
 
-#import "TWRSpecHelper.h"
+#import "NSString+TWRInterlacing.h"
 
-NSString * TWRStringByMergingStrings(NSArray *strings)
+@implementation NSString (TWRInterlacing)
+
++ (NSString *)stringByInterlacingStrings:(NSArray *)strings
 {
     __block NSUInteger maxLength = 0;
     [strings enumerateObjectsUsingBlock:^(NSString *string, NSUInteger idx, BOOL *stop) {
@@ -23,4 +25,6 @@ NSString * TWRStringByMergingStrings(NSArray *strings)
     }
     
     return [NSString stringWithString:result];
-};
+}
+
+@end

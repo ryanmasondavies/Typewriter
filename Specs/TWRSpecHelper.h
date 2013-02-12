@@ -9,6 +9,8 @@
 #define EXP_SHORTHAND
 #import <Expecta/Expecta.h>
 #import <Specta/Specta.h>
-#import "TWRTestViewController.h"
 
-NSString * TWRStringByMergingStrings(NSArray *strings);
+#import "TWRTestViewController.h"
+#import "NSString+TWRInterlacing.h"
+
+#import "Typewriter.h"
