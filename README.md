@@ -18,12 +18,12 @@ Typewriter uses private APIs and should not be used in a production environment.
 Installation
 ============
 
-Typewriter can be installed with CocoaPods. Add `pod 'Typewriter'` to your Podfile.
+Typewriter can be installed with [CocoaPods](https://github.com/CocoaPods/CocoaPods) by adding `pod 'Typewriter', '~> 0.1.0'` to your Podfile.
 
 License
 =======
 
-    Copyright (c) 2012 Ryan Davies
+    Copyright (c) 2013 Ryan Davies
     
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal
